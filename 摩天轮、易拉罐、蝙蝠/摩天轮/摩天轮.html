@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>摩天轮</title>
+	<style>
+	*{margin: 0;
+	padding: 0;}
+	.sum{width: 1200px;
+		height: 1000px;
+		margin:0 auto;
+		background-image: url(img/bg.jpg);
+		position: relative;}
+	.lunzi{width: 768px;
+		height: 768px;
+		background-image: url(img/fsw.png);
+		position: absolute;
+		left: 206px;
+		top:20px;
+		animation:zhuan 8s linear infinite;
+		}
+	@keyframes zhuan{
+		0%{top: 0;
+			left: 206;}
+		100%{top: 0;
+			left: 206;
+			transform:rotate(360deg) }
+	}
+	.lunzi img{position: absolute;
+		transform-origin:center top;}
+	.lunzi img:first-child{top: 40px;
+		left:210px; 
+		animation:child 8s linear infinite;}
+	@keyframes child{
+		0%{top:40;
+			left: 210;}
+		100%{top:40;
+			left: 210;
+			transform:rotate(-360deg);}
+	}
+	.lunzi img:nth-child(2){top:40px;
+		left: 450px;
+		animation:child2 8s linear infinite;}
+	@keyframes child2{
+		0%{top:40;
+			left: 450;}
+		100%{top:40;
+			left: 450;
+			transform:rotate(-360deg);}
+	}
+	.lunzi img:nth-child(3){top:240px;
+		left: 650px;
+		animation:child3 8s linear infinite;}
+	@keyframes child3{
+		0%{top:240;
+			left: 650;}
+		100%{top:240;
+			left: 650;
+			transform:rotate(-360deg);}
+	}
+	.lunzi img:nth-child(4){top:480px;
+		left: 630px;
+		animation:child4 8s linear infinite;}
+	@keyframes child4{
+		0%{top:480;
+			left: 630;}
+		100%{top:480;
+			left: 630;
+			transform:rotate(-360deg);}
+	}
+	.lunzi img:nth-child(5){top:680px;
+		left: 470px;
+		animation:child5 8s linear infinite;}
+	@keyframes child5{
+		0%{top:680;
+			left: 470;}
+		100%{top:680;
+			left: 470;
+			transform:rotate(-360deg);}
+	}
+	.lunzi img:nth-child(6){top:680px;
+		left: 200px;
+		animation:child6 8s linear infinite;}
+	@keyframes child6{
+		0%{top:680;
+			left: 200;}
+		100%{top:680;
+			left: 200;
+			transform:rotate(-360deg);}
+	}
+	.lunzi img:nth-child(7){top:500px;
+		left: 10px;
+		animation:child7 8s linear infinite;}
+	@keyframes child7{
+		0%{top:500;
+			left: 10;}
+		100%{top:500;
+			left: 10;
+			transform:rotate(-360deg);}
+	}
+	.lunzi img:nth-child(8){top:210px;
+		left: 10px;
+		animation:child8 8s linear infinite;}
+	@keyframes child8{
+		0%{top:210;
+			left: 10;}
+		100%{top:210;
+			left: 10;
+			transform:rotate(-360deg);}
+	}
+	.jiazi{width: 247px;
+		height: 505px;
+		background-image: url(img/bracketsmall.png);
+		position: absolute;
+		left: 470px;
+		top:400px;
+		}
+	.jiazi2{width: 350px;
+		height: 529px;
+		background-image: url(img/bracket.png);
+		position: absolute;
+		left: 410px;
+		top:400px;
+		}
+	.hua{width: 557px;
+		height: 257px;
+		background-image: url(img/big-title.png);
+		position: absolute;
+		left: 320px;
+		top:240px;}
+	.zi{width: 413px;
+		height: 139px;
+		background-image: url(img/title.png);
+		position: absolute;
+		left: 390px;
+		top:490px;}
+	.jiantou{width: 48px;
+		height: 64px;
+		background-image: url(img/arrow.png);
+		position: absolute;
+		left: 590px;
+		top:550px;}
+	</style>
+</head>
+<body>
+	<div class="sum">
+		<div class="jiazi"></div>
+		<div class="lunzi">
+			<img src="img/1.png" alt="">
+			<img src="img/2.png" alt="">
+			<img src="img/3.png" alt="">
+			<img src="img/4.png" alt="">
+			<img src="img/5.png" alt="">
+			<img src="img/6.png" alt="">
+			<img src="img/7.png" alt="">
+			<img src="img/8.png" alt="">
+		</div>
+		<div class="jiazi2"></div>
+		<div class="hua"></div>
+		<div class="zi"></div>
+		<div class="jiantou"></div>
+	</div>
+</body>
+</html>

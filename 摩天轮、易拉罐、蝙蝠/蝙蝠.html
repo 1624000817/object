@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>蝙蝠</title>
+	<style>
+	*{margin: 0;
+	padding: 0;}
+	body{overflow-x:hidden;}
+	div{width: 270px;
+		height: 240px;
+		position: relative;
+		background-image: url(pterodactyl.png);
+		animation:bianfu 2s steps(5);
+		animation-iteration-count:infinite,
+		animation:bi 1s linear;
+		animation-iteration-count:infinite;
+		}
+	@keyframes bianfu{
+		0%{
+			top: 0;
+			left: 0;
+			background-position: 0 0;}
+			100%{
+				top: 100px;
+				left: 1353px;
+				background-position:  -1353px 0;
+			}
+	}
+	@keyframes bi{
+		0%{top: 0;
+			left: 0;
+		}
+		25%{top:100px;
+			left: 25%;}
+		50%{top: 0px;
+			left: 50%;}
+		75%{top: 100px;
+			left: 75%;}
+		100%{top: 100px;
+			left: 100%;}
+	}
+
+	</style>
+</head>
+<body>
+<div></div>	
+</body>
+</html>
