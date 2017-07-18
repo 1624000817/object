@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<link rel="stylesheet" href="css/jquery.fullPage.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/dist/jquery-1.8.3.min.js" ></script>
+		
+	</head>
+	<body>
+		<div id="dowebok">
+			<!--第一屏-->
+			<div class="section">
+				<div class="one-left">
+					<h3>近12小时PM2.5数值变化</h3>
+					<p>上海星巴克/22楼/大会议室</p>
+				</div>
+				<div id="one-conent"></div>
+				<div id="one-right"></div>
+				<div id="one-bottom"></div>
+			</div>
+			<!--第二屏-->
+			<div class="section">
+				<div class="one-left">
+					<h3>PM2.5动态热力图</h3>
+					<p>上海星巴克/23楼/2017年3月1日</p>
+				</div>
+				<div id="second"></div>
+			</div>
+			<!--第三屏-->
+			<div class="section">
+				<div class="one-left">
+					<h3>一周每日上下班PM2.5均值对比</h3>
+					<p>上海星巴克/2017年3月12日-3月18日</p>
+				</div>
+				<div id="three"></div>
+			</div>
+			<!--第四屏-->
+			<div class="section">
+				<div class="one-left">
+					<h3>月空气质量等级天数比例</h3>
+					<p>上海星巴克、上海美领馆、和上海官方/2017年2月</p>
+				</div>
+				<div id="four"></div>
+			</div>	
+			<!--第五屏-->
+			<div class="section">
+				<div class="one-left">
+					<h3>即时数据一览无余</h3>
+					<p style="width: 100%;">上海星巴克/Sat March 10 2016 09:00:00 GMT+0800(CST)</p>
+				</div>
+				<div id="five"></div>
+			</div>
+			<!--第六屏-->
+			<div class="section">
+				<div class="one-left">
+					<h3>即时数据一览无余</h3>
+					<p style="width: 100%;">上海星巴克/Sat March 10 2016 09:00:00 GMT+0800(CST)</p>
+				</div>
+				<div id="six"></div>
+			</div>	
+		</div>
+	</body>
+	
+	<script type="text/javascript" src="js/dist/highstock.js" ></script>
+	<script type="text/javascript" src="js/dist/highcharts.js" ></script>
+	<script type="text/javascript" src="js/dist/heatmap.js" ></script>
+	<script type="text/javascript" src="js/dist/highcharts-3d.js" ></script>
+	<script type="text/javascript" src="js/dist/highcharts-more.js" ></script>
+	<script type="text/javascript" src="js/dist/exporting.js" ></script>
+	<script type="text/javascript" src="js/dist/data.js" ></script>
+	<script type="text/javascript" src="js/dist/highcharts-zh_CN.js" ></script>
+	<script type="text/javascript" src="js/dist/jquery.fullPage.min.js" ></script>
+	<script type="text/javascript" src="js/dist/index.js" ></script>
+	<script>
+	$(function(){
+		$('#dowebok').fullpage({
+			sectionsColor: ['#262829', '#262829', '#262829', '#262829','#262829','#262829','#262829','#262829','#262829'],
+			continuousVertical: true,
+			verticalCentered:false,
+			'navigation': true,
+		});
+	});
+	</script>
+</html>

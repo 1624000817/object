@@ -1,0 +1,76 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.section {color: #00fff9; 
+         padding-left: 30px;
+         font-size: 24px;
+}
+.section .one-left{
+	width: 40%;
+	height: 100px;
+	float: left;
+}
+#dowebok .section h3{
+	color: #8cc63f;
+	font-size: 30px;
+	width: 450px;
+	font-family: "微软雅黑";
+	line-height: 50px;
+}
+#dowebok .section p{
+	width: 450px;
+	color: #fff;
+	font-size: 20px;
+}
+
+.section #one-left h2:nth-child(1){
+	margin: 50px 0px 50px 0px;
+}
+.section #one-conent{
+	width:30%;
+	height:300px;
+	float:left;
+}
+.section #one-right{
+	width:30%;
+	height:300px;
+	float:left;
+}
+.section #one-bottom{
+	width:100%;
+	height:360px;
+	float: left;
+}
+
+/* 第二屏*/
+.section #second{
+	width: 100%;
+	height: 500px;
+	float: left;
+}
+/* 第三屏*/
+.section #three{
+	width: 100%;
+	height: 500px;
+	float: left;
+}
+/* 第四屏*/
+.section #four{
+	width: 100%;
+	height: 500px;
+	float: left;
+}
+
+/* 第五屏*/
+.section #five{
+	width: 100%;
+	height: 500px;
+	float: left;
+}
+/* 第六屏*/
+.section #six{
+	width: 100%;
+	height: 500px;
+	float: left;
+}
