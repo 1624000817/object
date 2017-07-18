@@ -1,0 +1,68 @@
+@width:100%;
+@height:600px;
+.content(@width,@height){
+    width: @width;
+    height: @height;
+};
+.banner{
+   width: @width;
+   height: @height;
+   background: url(../img/teacher_banner.png) no-repeat center center;
+   cursor: pointer;
+   position: relative;
+   .order10{
+       position: absolute;
+       bottom: 30%;
+       right: 32%;
+   }
+   
+    
+}
+.contain{
+    position: relative;
+    .content(@width,625px);
+    p:nth-child(2){
+        padding-top: 0px;
+        line-height: 55px;
+    }
+    .ad{height: 450px;
+        .pic{height: 325px;
+        .pic_1{
+            width: 200px;
+                height: 231px;
+                background: url(../img/teach_change1.png) no-repeat;
+                margin-left: 100px;
+              &:hover{
+                  background: url(../img/teach_change11.png) no-repeat;
+              }   
+        }
+        .pic_2{
+            width: 200px;
+                height: 231px;
+                background: url(../img/teach_change2.png) no-repeat;
+                 margin-left: 100px;
+              &:hover{
+                  background: url(../img/teach_change22.png) no-repeat;
+              }
+        }
+        
+        .pic_3{
+            width: 200px;
+                height: 231px;
+                background: url(../img/teach_change3.png) no-repeat;
+                 margin-left: 100px;
+              &:hover{
+                  background: url(../img/teach_change33.png) no-repeat;
+              }
+        }
+        p{
+            margin-top: 0px;
+            line-height: 64px;
+        }}
+    }
+    
+    .order3{
+        position: absolute;
+        bottom: 0px;
+    }
+}

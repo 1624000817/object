@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/four.css" />
+		<script type="text/javascript" src="js/wow.min.js" ></script>
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+		<script type="text/javascript" src="js/youwen.js" ></script>
+		<link rel="stylesheet" href="css/animate.min.css" />
+		
+	</head>
+	<body>
+		<div class="bg">
+			<div class="weixin"><div class="saoma"></div></div>
+			<div class="service"></div>
+			<div class="back"></div>
+			<!--模态框-->
+			<div class="mask" style="display:none;"></div>
+			<!--信息框-->
+			<div class="mtk" style="display: none;">
+				<p>信息<span id="close">×</span></p>
+				<div class="box">预约成功!</div>
+				<a href="">确认</a>
+			</div>
+			<!--头部开始-->
+			<div class="big">
+				<div id="top">
+					<div class="logo" >
+						<img src="img/logo.png" class="wow swing"/>
+					</div>
+					<div class="nav">
+						<ul>
+							<li><a href="index.html">首页</a></li>
+							<li><a href="jxln.html" >教学理念</a></li>
+							<li><a href="third.html">课程体系</a></li>
+							<li><a href="four.html"style="border-bottom: 3px solid red; color: red;">师资力量</a></li>
+							<li><a href="five.html">学习流程</a></li>
+							<li><a href="six.html">优问课堂</a></li>
+							<li><a href="seven.html">在线一对一</a></li>
+							<li class="phone"><img src="img/phone.png"/>电话：400-777-5029</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<!--banner start-->
+			<div class="banner">
+				<div class="order order10">免费预约</div>
+			</div>
+			<!--contain start-->
+			<div class="contain">
+				<p>每一名老师都是<span>学科专家</span></p>
+				<p>确保老师经验和技巧</p>
+				<div class="ad">
+					<div class="pic pic1">
+						<div class="pic_1 wow zoomIn"></div>
+						<p>小组模式</p>
+					</div>
+					<div class="pic pic2">
+						<div class="pic_2"></div>
+						<p>分层教学</p>
+					</div>
+					<div class="pic pic3">
+						<div class="pic_3"></div>
+						<p>顾问式服务</p>
+					</div>
+				</div>
+				<div class="order order3">免费预约</div>
+			</div>
+			<!--5轮筛选-->
+		<div class="shaixuan">
+			<h2>5轮筛选&nbsp;&nbsp;严格把控<span>教学质量</span></h2>
+			<div class="animate">
+				<span class="tran wow fadeInLeft" >来源：教学精英 全国各大名校 各省市资深教研员</span>
+				<span class="tran wow fadeInLeft" data-wow-duration="1200ms">1层筛选：扎实的学科学知识（17.4%）</span>
+				<span class="tran wow fadeInLeft" data-wow-duration="1400ms">2层筛选：精湛的教学技能（13.7%）</span>
+				<span class="tran wow fadeInLeft" data-wow-duration="1600ms">3层筛选：清晰的教学思路（8.5%）</span>
+				<span class="tran wow fadeInLeft" data-wow-duration="1800ms">4层筛选：丰富的教学经验（6.2%）</span>
+				<span class="tran wow fadeInLeft" data-wow-duration="2000ms">5层筛选：突出的人格魅力（3.7%）</span>
+			</div>
+			<div class="order order5">免费预约</div>
+		</div>
+		<div class="clear"></div>
+		<!--footer start-->
+		
+	<div class="small">
+		<div class="footer">
+			<div class="con">
+				<form action="" method="post">
+					<input type="text" name="" id="user" value=""placeholder="姓名" />
+					<input type="text" name="" id="phone" value="" placeholder="手机号码"/>
+					<select id="province">
+						<option value="请选择学段">请选择学段</option>
+						<option value="小学">小学</option>
+						<option value="小升初">小升初</option>
+						<option value="初中">初中</option>
+						<option value="中考冲刺">中考冲刺</option>
+						<option value="高中">高中</option>
+						<option value="高考冲刺">高考冲刺</option>
+					</select>
+					<select id="grade">
+						<option value="请选择年级">请选择年级</option>
+					</select>
+					<select name="">
+						<option value="语文">语文</option>
+						<option value="数学">数学</option>
+						<option value="英文">英文</option>
+						<option value="物理">物理</option>
+						<option value="化学">化学</option>
+					</select>
+					<div class="shiting">0元免费试听</div>
+				</form>
+			</div>
+		</div>
+		<div class="copyright" style="display: none;">
+			<p>Copyright © 上海优问文化传播有限公司（沪ICP备16050428号）</p>
+			<a href="">沪公网安备 31011002000908</a>
+		</div>
+	</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+			new WOW().init();
+		</script>
+		<script type="text/javascript">
+		var p=document.getElementById("province");
+		var c=document.getElementById("grade");
+		p.onchange=function(){
+			var prov=p.value;
+			c.options.length=0;
+			if(prov=="请选择学段"){
+				c.add(new Option("请选择班级","请选择班级"),null)
+			}
+			if(prov=="小学"){
+				c.add(new Option("一年级","一年级",true,true),null);
+				c.add(new Option("二年级","二年级"),null);
+				c.add(new Option("三年级","三年级"),null);
+				c.add(new Option("四年级","四年级"),null);
+				c.add(new Option("五年级","五年级"),null);
+			}
+			if(prov=="小升初"){
+				c.add(new Option("小升初","小升初",true,true),null);
+			}
+			if(prov=="初中"){
+				c.add(new Option("预初","预初",true,true),null);
+				c.add(new Option("初一","初一"),null);
+				c.add(new Option("初二","初二"),null);
+				c.add(new Option("初三","初三"),null);
+			}
+			if(prov=="中考冲刺"){
+				c.add(new Option("中考冲刺","中考冲刺",true,true),null);
+			}
+			if(prov=="高中"){
+				c.add(new Option("高一","高一",true,true),null);
+				c.add(new Option("高二","高二"),null);
+				c.add(new Option("高三","高三"),null);
+			}
+			if(prov=="高考冲刺"){
+				c.add(new Option("高考冲刺","高考冲刺",true,true),null);
+			}
+		}
+	</script>
+</html>

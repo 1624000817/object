@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript" src="js/wow.min.js" ></script>
+		<link rel="stylesheet" href="css/animate.min.css" />
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+		<script type="text/javascript" src="js/youwen.js" ></script>
+		<link rel="stylesheet" href="css/style.css" />
+		
+		<style type="text/css">
+				body{overflow-x: hidden;}
+				#lunbo ul li{list-style: none;
+					float: left;}
+				#lunbo li img{width: 100%;
+					}
+		</style>
+		
+		
+	</head>
+	<body>
+	<div class="bg">
+		<div class="weixin"><div class="saoma"></div></div>
+		<div class="service"></div>
+		<div class="back"></div>
+		<!--模态框-->
+		<div class="mask" style="display:none;"></div>
+		<!--信息框-->
+		<div class="mtk" style="display: none;">
+			<p>信息<span id="close">×</span></p>
+			<div class="box">预约成功!</div>
+			<a href="">确认</a>
+			
+		</div>
+		<div class="mask1" style="display: none;"></div>
+		<div class="xxk"></div>
+		<!--top start-->
+		<div class="big">
+			<div id="top">
+				<div class="logo" >
+					<img src="img/logo.png" class="wow swing"/>
+				</div>
+				<div class="nav">
+					<ul>
+						<li><a href="index.html"style="border-bottom: 3px solid red; color: red;">首页</a></li>
+						<li><a href="jxln.html">教学理念</a></li>
+						<li><a href="third.html">课程体系</a></li>
+						<li><a href="four.html">师资力量</a></li>
+						<li><a href="five.html">学习流程</a></li>
+						<li><a href="six.html">优问课堂</a></li>
+						<li><a href="seven.html">在线一对一</a></li>
+						<li class="phone"><img src="img/phone.png"/>电话：400-777-5029</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<!--轮播 star-->
+		<div id="lunbo">
+			<ul>
+				<li>
+					<a href=""><img src="img/banner.png" alt="" /></a>
+					<div class="order order1">免费预约</div>
+				</li>
+				<li>
+					<a href=""><img src="img/banner2.png" alt="" /></a>
+				</li>
+				<li>
+					<a href=""><img src="img/banner3.png" alt="" /></a>
+					<div class="order order2">免费预约</div>
+				</li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+		<!--contain start-->
+		<div class="contain">
+			<p>创新<span>教学模式</span>优质的<span>教学服务</span></p>
+			<p>让你的孩子享受幼稚的教学服务</p>
+			<div class="ad">
+				<div class="pic pic1">
+					<div class="pic_1 wow rubberBand"></div>
+					<p>小组模式</p>
+					<span class="model">2-6人，精品小班、学员互动良性竞争、及时反馈...</span>
+				</div>
+				<div class="pic pic2">
+					<div class="pic_2 wow rotateIn"></div>
+					<p>分层教学</p>
+					<div class="model">基础班、提高班、尖子班不同程度分层教学...</div>
+				</div>
+				<div class="pic pic3">
+					<div class="pic_3 wow rollIn"></div>
+					<p>顾问式服务</p>
+					<div class="model">兴趣激发，目标引领、过程管控、习惯纠正...</div>
+				</div>
+			</div>
+			<div class="order order3">免费预约</div>
+		</div>
+		<!--subject start-->
+		<div class="subject">
+			<p>中小学全学段全科目<span>同步培优</span></p>
+			<div class="course">
+				<ul id="banji">
+					<li>小学</li>
+					<li>初中</li>
+					<li>高中</li>
+					<li>冲刺班级</li>
+				</ul>
+			</div>
+			<div class="course xk" >
+				<ul class="son1">
+					<li>语文</li>
+					<li>数学</li>
+					<li>英语</li>
+				</ul>
+				<ul class="son1 son2"style="display: none;">
+					<li>语文</li>
+					<li>数学</li>
+					<li>英语</li>
+					<li>物理</li>
+					<li>化学</li>
+				</ul>
+				<ul class="son1 son2 son3"style="display: none;">
+					<li>语文</li>
+					<li>数学</li>
+					<li>英语</li>
+					<li>物理</li>
+					<li>化学</li>
+				</ul>
+				<ul class="son1 son4"style="display: none;">
+					<li>小五班</li>
+					<li>预备班</li>
+					<li>中考冲刺</li>
+					<li>高考冲刺</li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+			<div class="conter">
+				<!--小学-->
+				<div class="sons">
+					<!--小学语文-->
+					<div class="language" style="display: block;">
+						<div class="lang1"><p>一年级</p><div class="lang1b"><span>1.让学生掌握听读识字和看拼音识字的方法</span><span>2.学习结合上下文和生 活实际了解词句意思</span><span>3.用普通话积极的、有创造性地进行口语交际</span></div></div>
+						<div class="lang1 lang2"><p>二年级</p><div class="lang1b lang2b"><span>1.学会用部首查字法查字典学习音序查字法</span><span>2.能正确流利和尽可能有感情地朗读课文</span><span>3.能够仿写比较短小的课文段创设情景，鼓励学生乐于表达、交流</span></div></div>
+						<div class="lang1 lang3"><p>三年级</p><div class="lang1b lang3b"><span>1.辨析形近字、同音字，学习多音字</span><span>2.概括文字的主要内容或提炼重要信息</span><span>3.能不拘形式地写下见闻、感受和想象</span><span>4.把握主要内容，并能简要转述</span></div></div>
+						<div class="lang1 lang4"><p>四年级</p><div class="lang1b lang4b"><span>1.养成主动识字的习惯</span><span>2.体会表达的思想感情</span><span>3.开始练习写真实的生活能清楚明白地表述见闻</span></div></div>
+						<div class="lang1 lang5"><p>五年级</p><div class="lang1b lang5b"><span>1.有较强的独立识字能力</span><span>2.初步领悟文章基本的表达方法</span><span>3.能写简单的记实作文和想象作文</span></div></div>
+					</div>
+					<!--小学数学-->
+					<div class="language math" style="display: none;">
+						<div class="lang1">
+							<p>一年级</p>
+							<div class="lang1b">
+								<span>1.认识和理解数，建立数感，掌握简单的加减法</span>
+								<span>2.认识物体的形状和位置关系，拥有简单的几何观念</span>
+								<span>3.认识时间，学会找规律、统计等技能</span>
+							</div>
+						</div>
+						<div class="lang1 lang2">
+							<p>二年级</p>
+							<div class="lang1b lang2b">
+								<span>1.高阶的加减法、简单的乘除法</span>
+								<span>2.认识锐角、钝角，会画对称轴和平移旋转</span>
+								<span>3.长度单位及重量单位的认识</span>
+								<span>4.认识统计表统计图，解决简单的统计问题</span>
+							</div>
+						</div>
+						<div class="lang1 lang3">
+							<p>三年级</p>
+							<div class="lang1b lang3b">
+								<span>1.高阶的乘除法，认识小数、分数以及其简单计算</span>
+								<span>2.简单图形的周长、面积计算，长度、面积、重量单位</span>
+								<span>3.认识时间、年月日</span>
+								<span>4.平均数、统计与可能性</span>
+							</div>
+						</div>
+						<div class="lang1 lang4">
+							<p>四年级</p>
+							<div class="lang1b lang4b">
+								<span>1.大数的认识、四则运算及运算定律</span>
+								<span>2.掌握线、图形的分类以及平行垂直等关系</span>
+								<span>3.用统计解决实际问题</span>
+							</div>
+						</div>
+						<div class="lang1 lang5">
+							<p>五年级</p>
+							<div class="lang1b lang5b">
+								<span>1.小数混合四则运算、简易方程</span>
+								<span>2.因数和倍数、分数的性质及加减运算法</span>
+								<span>3.统计与可能性</span>
+							</div>
+						</div>
+						
+					</div>
+					<!--小学英语-->
+					<div class="language english" style="display: none;">
+						<div class="lang1">
+							<p>一年级</p>
+							<div class="lang1b">
+								<span>1.学习一些基础的生活名词，例如教室、水果、家人、小游戏等等。</span>
+								<span>2.学习到一些简单的陈述句、特殊疑问句及其回答等语法知识点</span>
+							</div>
+						</div>
+						<div class="lang1 lang2">
+							<p>二年级</p>
+							<div class="lang1b lang2b">
+								<span>1.学习有关职业、食物、房间摆设等知识，继续加深了对特殊疑问句的学习和理解</span>
+							</div>
+						</div>
+						<div class="lang1 lang3">
+							<p>三年级</p>
+							<div class="lang1b lang3b">
+								<span>1.学习关于动物、文具、简单数词、颜色等的表达。 语法涉及到了祈使句、询问对方意见或喜好的知识点</span>
+							</div>
+						</div>
+						<div class="lang1 lang4">
+							<p>四年级</p>
+							<div class="lang1b lang4b">
+								<span>1.主要学习超市、公园等场景的应用，以及数词的加深。 语法涉及到There be句型、一般现在时态和现在进行时态</span>
+							</div>
+						</div>
+						<div class="lang1 lang5">
+							<p>五年级</p>
+							<div class="lang1b lang5b">
+								<span>1.学习询问时间、询问交通方式、询问方向等知识点。 语法涉及到情态动词的使用、询问频率的特殊疑问词</span>
+							</div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<!--初中-->
+					<div class="sons">
+						<!--初中语文-->
+						<div class="middle" style="display: none;">
+							<div class="middle1">
+								<p>预初</p>
+								<div class="mid1">
+									<span>1.有较强的独立识字能力</span>
+									<span>2.掌握学习技巧 增强学以致用的能力</span>
+									<span>3.不同文体的表达顺序、表达方法</span>
+									<span>4.交流过程中有一定的主题</span>
+								</div>
+							</div>
+							<div class="middle1 middle2">
+								<p>初一</p>
+								<div class="mid1 mid2">
+									<span>1.名著阅读与文化文学常识积累</span>
+									<span>2.现代文快速阅读技巧</span>
+									<span>3.修辞方式灵活运用</span>
+									<span>4.作文审题，结构梳理</span>
+								</div>
+							</div>
+							<div class="middle1 middle3">
+								<p>初二</p>
+								<div class="mid1 mid3">
+									<span>1.现代文快速阅读技巧</span>
+									<span>2.文言文翻译技巧提升</span>
+									<span>3.现代文阅读文体知识总结</span>
+									<span>4.写作系统性思维加强</span>
+								</div>
+							</div>
+							<div class="middle1 middle4">
+								<p>初三</p>
+								<div class="mid1 mid4">
+									<span>1.综合性学习题型归纳</span>
+									<span>2.现代文阅读高频考点总结</span>
+									<span>3.文言文综合答题技巧</span>
+									<span>4.考前技巧、经验传授</span>
+								</div>
+							</div>
+						</div>
+						<!--初中数学-->
+						<div class="middle math" style="display: none;">
+							<div class="middle1">
+								<p>预初</p>
+								<div class="mid1">
+									<span>主要内容：数的整除、分数、比和比例、圆和扇形、有理数、一次方程（组）和一次不等式（组）、线段和角的画法、长方体的再认识</span>
+								</div>
+							</div>
+							<div class="middle1 middle2">
+								<p>初一</p>
+								<div class="mid1 mid2">
+									<span>主要内容：整式、分式、图形的运动 、实数、 相交线与平行线、三角形、平面直角坐标系</span>
+								</div>
+							</div>
+							<div class="middle1 middle3">
+								<p>初二</p>
+								<div class="mid1 mid3">
+									<span>主要内容：二次根式、一元二次方程、正比例函数和反比例函数 、几何证明 、一次函数、代数方程、四边形、概率初步</span>
+								</div>
+							</div>
+							<div class="middle1 middle4">
+								<p>初三</p>
+								<div class="mid1 mid4">
+									<span>主要内容：相似三角形、锐角三角比、 二次函数、圆与正多边形、统计初步</span>
+								</div>
+							</div>
+						</div>
+						<!--初中英语-->
+						<div class="middle English" style="display: none;">
+							<div class="middle1">
+								<p>预初</p>
+								<div class="mid1">
+									<span>基础知识的加深，语法知识的拓展，以及时态语法的应用</span>
+								</div>
+							</div>
+							<div class="middle1 middle2">
+								<p>初一</p>
+								<div class="mid1 mid2">
+									<span>主要学习一些简单词组，简单的语法知识，作为承上启下的重要年级</span>
+								</div>
+							</div>
+							<div class="middle1 middle3">
+								<p>初二</p>
+								<div class="mid1 mid3">
+									<span>涉及到书信的书写格式、高科技与生活的碰撞，开始强调知识的实际应用能力。</span>
+								</div>
+							</div>
+							<div class="middle1 middle4">
+								<p>初三</p>
+								<div class="mid1 mid4">
+									<span>全面学习英语的八大时态、对单词词性的学习和总结，熟练掌握对句子结构分析的能力</span>
+								</div>
+							</div>
+						</div>
+						<!--初中物理-->
+						<div class="middle physics" style="display: none;">
+							<div class="middle1 middle3">
+								<p>初二</p>
+								<div class="mid1 mid3">
+									<span>1.声、光、力基础掌握牢固</span>
+									<span>2.激发物理学习兴趣</span>
+									<span>3.基础知识提炼</span>
+									<span>4.题型归纳总结</span>
+									<span>5.书本结合实际掌握更牢</span>
+								</div>
+							</div>
+							<div class="middle1 middle4">
+								<p>初三</p>
+								<div class="mid1 mid4">
+									<span>1.解题技巧提升</span>
+									<span>2.易错易考知识点高频联系</span>
+									<span>3.中考真题专攻</span>
+									<span>4.考前经验传授</span>
+									<span>5.综合解题能力突破</span>
+								</div>
+							</div>
+						</div>
+						<!--初中化学-->
+						<div class="middle chemistry" style="display: none;">
+			
+							<div class="middle1 middle4">
+								<p>初三</p>
+								<div class="mid1 mid4">
+									<span>1.解题技巧提升</span>
+									<span>2.易错易考知识点高频联系</span>
+									<span>3.中考真题专攻</span>
+									<span>4.考前经验传授</span>
+									<span>5.综合解题能力突破</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--高中-->
+					<div class="sons">
+						<!--高中语文-->
+						<div class="high" style="display: none;">
+							<div class="high1"><p>高一</p><div class="high_1"><span>1.扎实的课内基础知识</span><span>2.记叙文阅读赏析理解</span><span>3.巧解文言文实词、虚词</span><span>4.合理规划学科知识体系</span></div></div>
+							<div class="high1 high2"><p>高二</p><div class="high_1 high_2"><span>1.课外知识阅读积累</span><span>2.散文、小说阅读赏析理解</span><span>3.高效提升文言文阅读解题能力</span><span>4.写作思维、结构拓展训练</span><span>5.高考冲刺提前接触</span></div></div>
+							<div class="high1 high3"><p style="color: #FE5454;">高三</p><div class="high_1 high_3"><span>1.各类题型巧解技巧</span><span>2.综合阅读鉴赏能力突破</span><span>3.历年真题高频训练</span><span>4.考前高频考点针对性查漏补缺</span><span>5.写作高分突破点拨</span></div></div>
+						</div>
+						<!--高中数学-->
+						<div class="high math" style="display: none;">
+							<div class="high1"><p>高一</p><div class="high_1"><span>1.主要内容：集合和命题；不等式；函数的基本性质； 幂函数、指数函数和对数函数；三角比；三角函数</span></div></div>
+							<div class="high1 high2"><p>高二</p><div class="high_1 high_2"><span>1.主要内容：数列与数学归纳法、平面向量的坐标表示、 矩阵和行列式初步、算法初步、坐标平面上的直线、圆锥曲线、复数</span></div></div>
+							<div class="high1 high3"><p style="color: #FE5454;">高三</p><div class="high_1 high_3"><span>1.主要内容：空间直线与平面、简单几何体、排列组合 与二项式定理、概率论初步、基本统计方法</span></div></div>
+						</div>
+						<!--高中英语-->
+						<div class="high English" style="display: none;">
+							<div class="high1"><p>高一</p><div class="high_1"><span>1.重点培养做题能力，文章阅读的理解能力和听力能力</span></div></div>
+							<div class="high1 high2"><p>高二</p><div class="high_1 high_2"><span>1.系统进行知识点提炼，提高写作能力，学习做题技巧</span></div></div>
+							<div class="high1 high3"><p style="color: #FE5454;">高三</p><div class="high_1 high_3"><span>1.进行系统化复习，加深对高考真题的理解和掌握，高效率的进行高考复习</span></div></div>
+						</div>
+						<!--高中物理-->
+						<div class="high physics" style="display: none;">
+							<div class="high1"><p>高一</p><div class="high_1"><span>1.匀变速直线运动</span><span>2.力和力的平衡</span><span>3.牛顿运动定律</span><span>4.周期运动</span><span>5.机械能</span><span>6.分子和气体定律</span></div></div>
+							<div class="high1 high2"><p>高二</p><div class="high_1 high_2"><span>1.内能 能量守恒定律</span><span>2.电场</span><span>3.电路</span><span>4.磁场</span><span>5.电磁感应</span><span>6.电磁波</span><span>7.物质的微观结构</span></div></div>
+							<div class="high1 high3"><p style="color: #FE5454;">高三</p><div class="high_1 high_3"><span>1.知识查漏补缺</span><span>2.高考经典题型案例分析</span><span>3.重点题型总结归纳</span><span>4.名师押题预测</span><span>5.考前心理疏导、经验技巧传授</span></div></div>
+						</div>
+						<!--高中化学-->
+						<div class="high chemistry" style="display:none;" >
+							<div class="high1"><p>高一</p><div class="high_1"><span>1.高级化学方程式书写</span><span>2.基础知识梳理巩固</span><span>3.培养化学学习兴趣及学习技巧</span><span>4.习惯、掌握题型</span><span>5.基础实验掌握提高</span></div></div>
+							<div class="high1 high2"><p>高二</p><div class="high_1 high_2"><span>1.重点难点强化训练</span><span>2.基础知识查漏补缺</span><span>3.计算技巧训练</span><span>4.重点实验专项突破</span><span>5.化学思维拓展及知识网络构建</span></div></div>
+							<div class="high1 high3"><p style="color: #FE5454;">高三</p><div class="high_1 high_3"><span>1.历年高频易考、易错考点重点分析</span><span>2.答题策略和针对性题库训练</span><span>3.构建化学系统性知识网络</span><span>4.考前经验技巧传授</span><span>5.高考前名师押题预测</span></div></div>
+						</div>
+					</div>
+					<!--冲刺班级-->
+					<div class="sons">
+						<!--小五班-->
+						<div class="xw" style="display: none;">
+							<div class="xwyw"><p>语文</p><div class="xw_yw"><span>1.加强课外阅读兴趣培养</span><span>2.修改病句解题技巧</span><span>3.写作手法熟练，灵活运用各种修辞手法</span><span>4.专题预习领先一步</span></div></div>
+							<div class="xwyw xwyw2"><p>数学</p><div class="xw_yw xw_yw2"><span>1.重点难点强化训练</span><span>2.基础知识查漏补缺</span><span>3.计算技巧训练</span><span>4.重点实验专项突破</span><span>5.化学思维拓展及知识网络构建</span></div></div>
+							<div class="xwyw xwyw3"><p style="color: #FE5454;">英语</p><div class="xw_yw xw_yw3"><span>1.历年高频易考、易错考点重点分析</span><span>2.答题策略和针对性题库训练</span><span>3.构建化学系统性知识网络</span><span>4.考前经验技巧传授</span><span>5.高考前名师押题预测</span></div></div>
+						</div>
+						<!--预备班-->
+						<div class="xw ready" style="display: none;">
+							<div class="xwyw"><p>语文</p><div class="xw_yw"><span>1.小升初重点知识归纳</span><span>2.小升初各模块专题训练</span><span>3.考前技巧经验传授</span><span>4.小升初写作能力专项点拨</span><span>5.历年真题训练提高应试综合解题能力</span></div></div>
+							<div class="xwyw xwyw2"><p>数学</p><div class="xw_yw xw_yw2"><span>1.数学考点集中训练、各类题型逐一击破</span><span>2.历年小升初重点、难点密集训练</span><span>3.考前技巧经验传授</span><span>4.考前针对性心理疏导</span><span>5.考前个性化查漏补缺</span></div></div>
+							<div class="xwyw xwyw3"><p style="color: #FE5454;">英语</p><div class="xw_yw xw_yw3"><span>1.历年易考重点总结归纳</span><span>2.小升初写作能力综合训练</span><span>3.听力专题训练强化技巧</span><span>4.阅读理解能力重点突破</span><span>5.重要词组、句型重点牢记</span></div></div>
+						</div>
+						<!--中考冲刺班-->
+						<div class="zk" style="display:none;">
+							<div class="zk1"><p style="color: #FDB62B;">语文</p><div class="zk_1"><span>1.中考难点专项训练、讲解</span><span>2.文言文综合解题能力提高</span><span>3.历年易考、易错考点重点讲解</span><span>4.名师作文押题</span><span>5.考前经验技巧传授</span></div></div>
+							<div class="zk1 zk2"><p style="color: #FDB62B;">数学</p><div class="zk_1 zk_2"><span>1.冲刺阶段规划指导学习方案</span><span>2.针对性查漏补缺专讲</span><span>3.各类题型解题策略总结</span><span>4.历年中考真题、模拟题集中讲解</span><span>5.考前心理疏导、技巧经验传授</span></div></div>
+							<div class="zk1 zk3"><p style="color: #FC8B37;">英语</p><div class="zk_1 zk_3"><span>1.冲刺阶段规划指导学习方案</span><span>2.完型答题技巧快速提升</span><span>3.听力专项讲解训练</span><span>4.考前知识点综合梳理</span><span>5.考前心理疏导，技巧经验传授</span></div></div>
+							<div class="zk1 zk4"><p style="color: #FC8B37;">物理</p><div class="zk_1 zk_4"><span>1.考前易错易考知识点重点讲解</span><span>2.各题型解题技巧逐一分析</span><span>3.反复大量熟悉中考题型</span><span>4.个性化查漏补缺</span><span>5.考前心理疏导、经验技巧传授</span></div></div>
+							<div class="zk1 zk5"><p style="color: #FE5454;">物理</p><div class="zk_1 zk_5"><span>1.大量限时答题训练</span><span>2.历年易错、易考、易混专讲</span><span>3.创新题型集中训练</span><span>4.考前心态调整技巧</span><span>5.考前经验技巧传授</span></div></div>
+						</div>
+						<!--高考冲刺-->
+						<div class="zk gk" style="display: none;">
+							<div class="zk1"><p style="color: #FDB62B;">语文</p><div class="zk_1"><span>1.各题型专题狂练</span><span>2.文言文专题拓展训练</span><span>3.状元满分作文赏，名师解读</span><span>4.考前经验技巧传授</span><span>5.考前调整心态、正确心理引导</span></div></div>
+							<div class="zk1 zk2"><p style="color: #FDB62B;">数学</p><div class="zk_1 zk_2"><span>1.历年真题、难题、易错题高频训练</span><span>2.训练限时解题技巧</span><span>3.各题型解题技巧熟练掌握</span><span>4.概率、立几、概率、解几、函数，五大专题逐一击破</span><span>5.考前心理疏导，解题经验技巧传授</span></div></div>
+							<div class="zk1 zk3"><p style="color: #FC8B37;">英语</p><div class="zk_1 zk_3"><span>1.综合阅读理解能力重点突破</span><span>2.常见高考题型解题技巧掌握</span><span>3.重点、难点词组、短语、句型重点掌握</span><span>4.高考满分作文冲刺</span><span>5.考前心理疏导，经验技巧传授</span></div></div>
+							<div class="zk1 zk4"><p style="color: #FC8B37;">物理</p><div class="zk_1 zk_4"><span>1.知识查漏补缺</span><span>2.高考经典题型案例分析</span><span>3.重点题型总结归纳</span><span>4.名师押题预测</span><span>5.考前心理疏导、经验技巧传授</span></div></div>
+							<div class="zk1 zk5"><p style="color: #FE5454;">物理</p><div class="zk_1 zk_5"><span>1.解题技巧补充</span><span>2.高考真题狂练</span><span>3.各题型总结归纳</span><span>4.高分考生心经</span><span>5.考前心理疏导、经验技巧传授</span></div></div>
+						</div>
+					</div>
+			</div>
+			<div class="order order4">免费预约</div>
+		</div>
+		<div class="clear"></div>
+		<!--5轮筛选-->
+		<div class="shaixuan">
+			<h2>5轮筛选&nbsp;&nbsp;严格把控<span>教学质量</span></h2>
+			<div class="animate">
+				<span class="tran wow fadeInLeft" >来源：教学精英 全国各大名校 各省市资深教研员</span>
+				<span class="tran wow fadeInLeft" data-wow-duration="1200ms">1层筛选：扎实的学科学知识（17.4%）</span>
+				<span class="tran wow fadeInLeft" data-wow-duration="1400ms">2层筛选：精湛的教学技能（13.7%）</span>
+				<span class="tran wow fadeInLeft" data-wow-duration="1600ms">3层筛选：清晰的教学思路（8.5%）</span>
+				<span class="tran wow fadeInLeft" data-wow-duration="1800ms">4层筛选：丰富的教学经验（6.2%）</span>
+				<span class="tran wow fadeInLeft" data-wow-duration="2000ms">5层筛选：突出的人格魅力（3.7%）</span>
+			</div>
+			<div class="order order5">免费预约</div>
+		</div>
+		<div class="clear"></div>
+		<!--沟通-->
+		<div class="gout">
+			<p>全方位的优质的<span>跟进沟通</span></p>
+			<p>让您的孩子享受优质的教学服务</p>
+			<div class="gtpic">
+				<div class="gtpic1"><img src="img/lian.png"/></div>
+				<div class="gtpic2"><img src="img/ce.png"/ ></div>
+				<div class="gtpic3"><img src="img/xue.png"/></div>
+				<div class="gtpic4"><img src="img/ping.png"/></div>
+				<div class="gtpic5"><img src="img/gai.png"/></div>
+			</div>
+			<div class="order order6">免费预约</div>
+		</div>
+		<div class="clear"></div>
+		<!--footer start-->
+		
+	<div class="small">
+		<div class="footer">
+			<div class="con">
+				<form action="" method="post">
+					<input type="text" name="" id="user" value=""placeholder="姓名" />
+					<input type="text" name="" id="phone" value="" placeholder="手机号码"/>
+					<select id="province">
+						<option value="请选择学段">请选择学段</option>
+						<option value="小学">小学</option>
+						<option value="小升初">小升初</option>
+						<option value="初中">初中</option>
+						<option value="中考冲刺">中考冲刺</option>
+						<option value="高中">高中</option>
+						<option value="高考冲刺">高考冲刺</option>
+					</select>
+					<select id="grade">
+						<option value="请选择年级">请选择年级</option>
+					</select>
+					<select name="">
+						<option value="语文">语文</option>
+						<option value="数学">数学</option>
+						<option value="英文">英文</option>
+						<option value="物理">物理</option>
+						<option value="化学">化学</option>
+					</select>
+					<div class="shiting">0元免费试听</div>
+				</form>
+			</div>
+		</div>
+		<div class="copyright" style="display: none;">
+			<p>Copyright © 上海优问文化传播有限公司（沪ICP备16050428号）</p>
+			<a href="">沪公网安备 31011002000908</a>
+		</div>
+	</div>
+	
+</div>
+	</body>
+		
+		<script type="text/javascript">
+			new WOW().init();
+		</script>
+	<script>
+			
+			var lu=document.getElementById("lunbo");
+			var list=lu.getElementsByTagName("li");
+			var thew=window.screen.width;//当前屏幕的可用宽度
+			lu.style.width=thew*list.length+"px";//div的宽度=屏幕宽度*li的个数（list.length)
+			for(i=0;i<list.length;i++){//遍历每一个li标签
+				list[i].style.width=thew+"px"//li的宽度=屏幕的宽度
+			}
+			var str=0;
+			function fun(){
+				str+=thew;//str=str+thew
+				if(str>=thew*(list.length)){//大于li的个数时从头开始（移动的范围）
+					str=0;
+				}
+				lu.style.marginLeft=-str+"px"//div每次向外左移动一个屏幕的宽度
+				
+			}
+			setInterval("fun()",2000)//调用函数fun(),每隔2秒调用一次
+			
+		</script>
+		
+		<script type="text/javascript">
+		var p=document.getElementById("province");
+		var c=document.getElementById("grade");
+		p.onchange=function(){
+			var prov=p.value;
+			c.options.length=0;
+			if(prov=="请选择学段"){
+				c.add(new Option("请选择班级","请选择班级"),null)
+			}
+			if(prov=="小学"){
+				c.add(new Option("一年级","一年级",true,true),null);
+				c.add(new Option("二年级","二年级"),null);
+				c.add(new Option("三年级","三年级"),null);
+				c.add(new Option("四年级","四年级"),null);
+				c.add(new Option("五年级","五年级"),null);
+			}
+			if(prov=="小升初"){
+				c.add(new Option("小升初","小升初",true,true),null);
+			}
+			if(prov=="初中"){
+				c.add(new Option("预初","预初",true,true),null);
+				c.add(new Option("初一","初一"),null);
+				c.add(new Option("初二","初二"),null);
+				c.add(new Option("初三","初三"),null);
+			}
+			if(prov=="中考冲刺"){
+				c.add(new Option("中考冲刺","中考冲刺",true,true),null);
+			}
+			if(prov=="高中"){
+				c.add(new Option("高一","高一",true,true),null);
+				c.add(new Option("高二","高二"),null);
+				c.add(new Option("高三","高三"),null);
+			}
+			if(prov=="高考冲刺"){
+				c.add(new Option("高考冲刺","高考冲刺",true,true),null);
+			}
+		}
+	</script>
+	<script>
+		var mybg=document.getElementsByClassName("bg")[0];
+		var xs=document.getElementsByClassName("copyright")[0];
+		var h=mybg.offsetHeight;
+		var H=document.documentElement.clientHeight;
+		window.onscroll=function(){
+			var sh=mybg.scrollTop;
+			/*alert(sh)*/
+		}
+	</script>
+		
+</html>
