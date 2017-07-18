@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/iconfont.css" />
+		<link rel="stylesheet" href="css/animate.min.css" />
+		<script type="text/javascript" src="js/wow.min.js" ></script>
+	</head>
+	<body>
+		<audio id="bgmusic" src="img/王俊凯 - 告白气球(Live).mp3"></audio>
+		<div id="box" >
+			<!--弹出-->
+			<div class="mtk" style="display: none;"></div>
+			<div id="tc" style="display: none;">
+				<h2>你确定要关闭窗口吗？</h2>
+				<button>取消</button>
+				<button>确定</button>
+			</div>
+			<!--top start-->
+			<div id="top">
+				<div class="pic1"><img src="img/pic5.png"/></div>
+				<p>暖夏<br />
+					<input type="text" name="" id="" value="" placeholder="编辑个性签名" />
+				</p>
+				<span id="span1" style="display: none;">
+					<ul id="cen1">
+						<li>王俊凯 - 告白气球.mp3</li>
+						<li>王俊凯 - 告白气球.mp3</li>
+					</ul>
+					<ul id="cen2"></ul>
+				</span>
+				<span onclick="cl()" id="span2">×</span>
+				<select name="" id="secl" onchange="fun()">
+					<option value="春天">春天</option>
+					<option value="夏天">夏天</option>
+					<option value="秋天">秋天</option>
+					<option value="冬天">冬天</option>
+				</select>
+				<div id="time"></div>
+			</div>
+			<!--content start-->
+			<div id="content"></div>
+			<!--slide start-->
+			<div class="slide">
+				<p class="p1">不能发空消息</p>
+				<p class="p1">敏感字***代替</p>
+				<p class="p1">图片替换尴尬 开心</p>
+				<p class="p1">显示聊天内容和时间</p>
+				<p class="p1">每发一条消息随机显示名称</p>
+			</div>
+			<div class="ys">
+				<div id="font" style="display: none;">
+					<select name="" onclick="fontf()">
+						<option value="楷体">楷体</option>
+						<option value="宋体">宋体</option>
+						<option value="微软雅黑">微软雅黑</option>
+						<option value="隶书">隶书</option>
+					</select>
+					<select name="" onchange="fontsize()">
+						<option value="16">16</option>
+						<option value="18">18</option>
+						<option value="20">20</option>
+						<option value="22">22</option>
+					</select>
+				</div>
+				<div id="jy" style="display: none;">全员禁言中</div>
+				<span id="sp1" title="改变字体大小">A</span>
+				<span id="sp2">☺</span>
+				<span id="sp3">禁止发言</span>
+				<span id="sp4" onclick="play()">♬</span>
+				<span id="sp5">聊天记录</span>
+			</div>
+			<!--footer start-->
+			<div class="footer">
+				<form action="">
+					<input type="text" name="" id="inp1" value="" />
+					<input type="button" id="inp2" value="发送" class="inps" onclick="send()"/>
+					<input type="reset" value="清除" class="inps"/>
+					<div id="gg">
+						<ul id="con1">
+							<li>[新闻]:国务院总理李克强会见拉脱维亚总统违约尼斯</li>
+							<li>[新闻]:昔日狂人为何选择上港？博阿斯有四大打算盘</li>
+						</ul>
+				</div>
+				</form>
+				
+			</div>
+			<!--right strat-->
+			<div class="right">
+				<p class="p2">
+					<img src="img/tu1.png" width="25px"/>圈圈:1635789207
+				</p>
+				<p class="p2">
+					<img src="img/tu2.jpg" width="25px"/>无忧:1635789207
+				</p>
+				<p class="p2">
+					<img src="img/tu3.jpg" width="25px"/>随园:1635789207
+				</p>
+				<p class="p2">
+					<img src="img/pic5.png" width="25px"/>暖夏:1635789207
+				</p>
+				<p class="p2">
+					<img src="img/tu4.jpg" width="25px"/>浅笑:1635789207
+				</p>
+				<p class="p2">
+					<img src="img/tu5.jpg" width="25px"/>安然:1635789207
+				</p>
+				<p class="p2">
+					<img src="img/tu6.jpg" width="25px"/>大美:1635789207
+				</p>
+			</div>
+			
+		</div>
+		
+	</body>
+	
+	
+	
+	<script type="text/javascript">
+	//音乐播放和停止
+		var myspan1=document.getElementById("span1");
+		var mycen1=document.getElementById("cen1");
+		var mycen2=document.getElementById("cen2");
+		var isPlaying=false;
+		function play(){
+			var player=document.getElementById("bgmusic");
+			if(isPlaying){
+				player.pause();
+				player.src='';
+				myspan1.style.display="none"
+				isPlaying=false;
+			}else{
+				player.src='img/王俊凯 - 告白气球(Live).mp3';
+				player.play();
+				isPlaying=true;
+				myspan1.style.display="block"
+			}
+		}
+		//音乐显示
+			
+			mycen2.innerHTML=cen1.innerHTML;
+			function gd2(){
+				if(myspan1.scrollLeft>=cen1.scrollWidth){
+					myspan1.scrollLeft=0;
+				}else {
+					myspan1.scrollLeft++ 
+				}
+			}
+			setInterval("gd2()",50)
+	
+	
+	
+		//时间
+		var mytop=document.getElementById("time");
+		function time(){
+			var d=new Date();
+				var h=d.getHours();
+				var f=d.getMinutes();
+				var s=d.getSeconds();
+				if(h<10){
+					h="0"+h;
+				}
+				if(f<10){
+					f="0"+f;
+				}
+				if(s<10){
+					s="0"+s;
+				}
+			mytop.innerHTML=h+"时"+f+"分"+s+"秒";
+		}
+		setInterval(time,1000);
+		
+		//季节切换
+		var mybox=document.getElementById("box");
+		var sec=document.getElementById("secl");
+		function fun(){
+			var sv=sec.value;
+			if(sv=="春天"){
+				mybox.style="background-image:url(img/pic1.jpg)";
+			}else if(sv=="夏天"){
+				mybox.style="background-image:url(img/pic2.jpg)";
+			}else if(sv=="秋天"){
+				mybox.style="background-image:url(img/33.jpg)";
+			}else if(sv=="冬天"){
+				mybox.style="background-image:url(img/22.jpg)";
+			}
+			
+		}
+		//字体样式
+			var mysp1=document.getElementById("sp1");
+			var myfont=document.getElementById("font");
+			var se1=document.getElementsByTagName("select")[1];
+			var se2=document.getElementsByTagName("select")[2];
+			var ft=0;
+			mysp1.onclick=function(){
+				if(ft==0){
+					myfont.style.display="block";
+					ft=1;
+				}else{
+					myfont.style.display="none";
+					ft=0;
+				}
+			}
+			function fontf(){
+				sev1=se1.value;
+				var txt=document.getElementById("inp1");
+				txt.style.fontFamily=sev1;
+			}
+			function fontsize(){
+				sev=se2.value+"px";
+				var txt=document.getElementById("inp1");
+				txt.style.fontSize=sev;
+				
+			}
+			
+		//会话框
+			var smsbox=document.getElementById("content");
+			function touxiang(){
+				var txs=["<img src='img/tu1.png' width='25px'/>","<img src='img/tu2.jpg' width='25px'/>","<img src='img/tu3.jpg' width='25px'/>","<img src='img/tu4.jpg' width='25px'/>","<img src='img/tu5.jpg' width='25px'/>"]
+				return txs[parseInt(Math.random()*txs.length)];
+			}
+			 function people(){
+			 	var names=["<span style='color:red'>浅笑</span>","<span style='color:pink'>安然</span>","<span style='color:#f0f'>圈圈</span>","<span style='color:blue'>随园</span>","<span style='color:orange'>无忧</span>","<span style='color:#4df2d5'>浮生若梦</span>"];
+			 	return names[parseInt(Math.random()*names.length)];
+			 	
+			 }
+			 function jz(){
+			 	var nrs=["尴尬","今天天气很好","宝宝想吃肉！","我们吃饭吧！","我来啦啦啦","红包红包","开心","好啊"];
+			 	return nrs[parseInt(Math.random()*nrs.length)];
+			 
+			 	
+			 }
+			var pe=setInterval(people,2000);
+
+			function dh(){
+				smsbox.innerHTML=smsbox.innerHTML+"&nbsp"+people()+":&nbsp"+mytop.innerHTML+"<br/><br/>"+"&nbsp;&nbsp"+jz()+"<br/><br/>";
+				smsbox.scrollTop=smsbox.scrollHeight;
+				smsbox.innerHTML=smsbox.innerHTML.replace(/开心/g,"<img src='img/1.jpg'/>");
+				smsbox.innerHTML=smsbox.innerHTML.replace(/尴尬/g,"<img src='img/2.jpg'/>");
+				
+				
+			}
+			var set=setInterval(dh,2000);
+			
+				
+			
+			//发送
+			function send(){
+				var txt=document.getElementById("inp1").value;
+				if(txt.length>0){
+					smsbox.innerHTML=smsbox.innerHTML+"<span style='margin-left:350px;display:block'>&nbsp;暖夏："+mytop.innerHTML+"<br/><br/>"+"&nbsp;&nbsp;"+txt+"<br/><br/></span>"+"<br/>";
+					smsbox.innerHTML=smsbox.innerHTML.replace(/开心/g,"<img src='img/1.jpg'/>");
+					smsbox.innerHTML=smsbox.innerHTML.replace(/尴尬/g,"<img src='img/2.jpg'/>");
+					smsbox.innerHTML=smsbox.innerHTML.replace(/法轮功/g,"***");
+					smsbox.innerHTML=smsbox.innerHTML.replace(/李洪志/g,"***");
+					smsbox.innerHTML=smsbox.innerHTML.replace(/台独/g,"**");
+					smsbox.innerHTML=smsbox.innerHTML.replace(/反共/g,"**");
+					smsbox.innerHTML=smsbox.innerHTML.replace(/反党/g,"**");
+					smsbox.innerHTML=smsbox.innerHTML.replace(/萨德/g,"**");
+					smsbox.scrollTop=smsbox.scrollHeight;
+				}
+				document.getElementById("inp1").value="";
+				 
+			}
+			send();
+			//enter 发送
+			document.onkeyup=function(e){
+				if(e.keyCode==13){
+					send()
+				}
+			}
+			//广告
+			var mygg=document.getElementById("gg");
+			var mycon1=document.getElementById("con1");
+			mycon1.innerHTML=mycon1.innerHTML+mycon1.innerHTML;
+			var i;
+			function gd(){
+				if(mygg.scrollTop%30==0){
+					clearInterval(timer);
+					i=setTimeout(move,1000);
+				}
+				if(mygg.scrollTop>=mycon1.scrollHeight/2){
+					mygg.scrollTop=0;
+
+				}else{
+					mygg.scrollTop++
+				}
+			}
+			function move(){
+				mygg.scrollTop++;
+				timer=setInterval("gd()",50);
+			}
+			move();
+			
+				mygg.onmouseover=function fs(){
+					clearInterval(timer);
+					clearTimeout(i)
+				}
+				mygg.onmouseout=function yk(){
+					timer=setInterval("gd()",50);
+				}
+			
+			//关闭按钮	
+				var mytc=document.getElementById("tc");
+				var mymtk=document.getElementsByClassName("mtk")[0];
+				var btns=document.getElementsByTagName("button");
+					function cl(){
+						mytc.style.display="block";
+						mymtk.style.display="block";
+						clearInterval(set);
+						clearInterval(pe);
+						clearInterval(timer);
+						clearTimeout(i);
+						
+					}
+				//取消按钮
+				btns[0].onclick=function(){
+					mytc.style.display="none";
+					mymtk.style.display="none";
+					setInterval(dh,2000);
+					setInterval(people,2000);
+					setTimeout(move,1000);
+					
+					
+					
+				}
+			//确定按钮
+			btns[1].onclick=function(){
+				mybox.style.display="none"
+			}
+			
+			
+			//禁止发言
+			var mystop=document.getElementById("sp3");
+			var myjy=document.getElementById("jy");
+			var cs=0;
+			mystop.onclick=function(){
+				if(cs==0){
+					myjy.style.display="block";
+					clearInterval(set);
+					clearInterval(pe);
+					cs=1;
+					
+				}else{
+					myjy.style.display="none";
+					setInterval(dh,2000)
+					setInterval(people,2000)
+					cs=0;
+					}
+				}
+			//聊天记录
+			var ls=document.getElementById("sp5");
+			var myslide=document.getElementsByClassName("slide")[0];
+			ls.onclick=function(){
+				myslide.innerHTML=smsbox.innerHTML;
+				myslide.scrollTop=myslide.scrollHeight;	
+				
+			}
+			
+			
+			
+			
+	</script>
+	<script type="text/javascript">
+		new WOW().init();
+	</script>
+</html>
