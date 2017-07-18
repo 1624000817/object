@@ -1,0 +1,472 @@
+<!--头部-->
+<div class="page-header">
+	<div class="logo">
+		<img src="img/logo_mini.png" />
+	</div>
+</div>
+<!--中间-->
+<div class="page-middle">
+	<div class="cont">
+		<div class="login-panel">
+			<ul class="login-tab">
+				<li class="link">短息登录</li>
+				<li>密码登录</li>
+			</ul>
+			<div class="login-box">
+				<div class="login-form">
+					<ul>
+						<li class="err-msg">
+							<b></b>
+							<span>此用户已存在！</span>
+						</li>
+						<div class="clear"></div>
+						<li class="username">
+							<input type="text" maxlength="11" class="ltext"  placeholder="手机号码"/>
+							<p>新手机号将认为接受<a href="javascript:;">《走秀网用户协议》</a>并自动注册账号</p>
+						</li>
+						<div class="clear"></div>
+						<li class="err-msg">
+							<b></b>
+							<span>请输入您收到的验证码</span>
+						</li>
+						<div class="clear"></div>
+						<li class="msgcode">
+							<input type="text" name="" id="" value="" class="ltext" placeholder="短信验证码"/>
+							<a href="javascript:;">获取验证码</a>
+						</li>
+						<div class="clear"></div>
+						<li class="check">
+							<b ng-click="pic()"></b>
+							两周内自动登录
+							<a href="javascript:;">找回密码</a>
+						</li>
+						<div class="clear"></div>
+						<li class="btn">
+							<button ng-click="regist()">注&nbsp;&nbsp;&nbsp;册</button>
+						</li>
+					</ul>
+				</div>
+				<div class="login-info">
+					<div class="optbar">
+						<span>合作网站账号登录</span>
+					</div>
+					<ul>
+						<li class="qq"></li>
+						<li class="wechat"></li>
+						<li class="microblog"></li>
+						<li class="pay"></li>
+						<li class="pingan"></li>
+					</ul>
+				</div>
+				<a href="javascript:;" class="codego"></a>
+				<a href="javascript:;" class="ewmg"></a>
+			</div>
+			<div class="login-box">
+				<div class="login-form">
+					<ul>
+						<li class="err-msg">
+							<b></b>
+							<span>用户名或密码错误！</span>
+						</li>
+						<div class="clear"></div>
+						<li class="username">
+							<input type="text" maxlength="11" class="ltext" id="user" ng-model="username" placeholder="手机号码/邮箱/用户名"/>
+							<p>新手机号将认为接受<a href="javascript:;">《走秀网用户协议》</a>并自动注册账号</p>
+						</li>
+						<div class="clear"></div>
+						<li class="err-msg">
+							<b></b>
+							<span>请输入密码</span>
+						</li>
+						<div class="clear"></div>
+						<li class="msgcode">
+							<input type="password" name="" id="pass" value="" ng-model="password" class="ltext" placeholder="密码"/>
+						</li>
+						<div class="clear"></div>
+						<li class="check">
+							<b></b>
+							两周内自动登录
+							<a href="javascript:;" class="register" ng-click="up()">注册账号</a>
+							<span>|</span>
+							<a href="javascript:;">找回密码</a>
+						</li>
+						<div class="clear"></div>
+						<li class="btn" id="btn">
+							<button ng-click="go()">登&nbsp;&nbsp;&nbsp;录</button>
+						</li>
+					</ul>
+				</div>
+				<div class="login-info">
+					<div class="optbar">
+						<span>合作网站账号登录</span>
+					</div>
+					<ul>
+						<li class="qq"></li>
+						<li class="wechat"></li>
+						<li class="microblog"></li>
+						<li class="pay"></li>
+						<li class="pingan"></li>
+					</ul>
+				</div>
+				<a href="javascript:;" class="codego" id="code-pass"></a>
+				<a href="javascript:;" class="ewmg" id="ewpass"></a>
+			</div>
+		</div>
+	</div>
+</div>
+<!--脚部-->
+<div class="page-footer">
+	<div class="footer-xiu">
+		<a href="javascript:;">关于走秀</a>
+		<b>|</b>
+		<a href="javascript:;">媒体报道</a>
+		<b>|</b>
+		<a href="javascript:;">品牌招商</a>
+		<b>|</b>
+		<a href="javascript:;">加入走秀</a>
+		<b>|</b>
+		<a href="javascript:;">友情链接</a>
+		<b>|</b>
+		<a href="javascript:;">联系我们</a>
+		<b>|</b>
+		<a href="javascript:;">帮助中心</a>
+		<b>|</b>
+		<a href="javascript:;">网站地图</a>
+	</div>
+	<div class="footer-copyright">
+		Copyright © 2008-2017 Xiu.com 版权所有 . 粤ICP备07502993号
+	</div>
+</div>
+<style type="text/css">
+	*{
+		box-sizing: border-box;
+	}
+	.clear{
+	clear: both;
+}
+	ul{
+		list-style: none;
+	}
+	.page-header{
+		width:1200px;
+		height: 60px;
+		margin: 0 auto;
+	}
+	.page-header .logo{
+		width: 194px;
+		height: 30px;
+		padding: 15px 0px;
+		float: left;
+	}
+	.page-middle{
+		width: 100%;
+		height: 700px;
+		padding-top: 70px;
+		background-color: #f7f2ec;
+		border-top: 1px solid #e5e5e5;
+	}
+	.page-middle .cont{
+		width: 1200px;
+		height: 629px;
+		margin:0 auto;
+		position: relative;
+		background: url(img/login_bg.jpg) no-repeat center top;
+	}
+	.page-middle .cont .login-panel{
+		width: 420px;
+		height: 560px;
+		position: relative;
+		border: 1px solid #d8d8d8;
+    	box-shadow: 0 0 20px #c8c8c8;
+    	background-color: #fff;
+    	position: absolute;
+    	top: 0px;
+    	right: 30px;
+	}
+	.page-middle .cont .login-panel .login-tab{
+		width: 100%;
+		height: 52px;
+		background-color: #f7f7f9;
+	}
+	.page-middle .cont .login-panel .login-tab li{
+		width: 50%;
+		height: 50px;
+		float: left;
+		color:#afafaf;
+		text-align: center;
+		cursor: pointer;
+		line-height: 52px;
+		border-bottom: 2px solid #f7f7f9;
+	}
+	.page-middle .cont .login-panel .login-tab li.link{
+		font-weight: bold;
+		color: #464646;
+		border-bottom: 2px solid #464646;
+	}
+	.page-middle .cont .login-panel .login-tab li:hover{
+		font-weight: bold;
+		color: #464646;
+		border-bottom: 2px solid #464646;
+	}
+	.page-middle .cont .login-panel .login-box{
+		width: 100%;
+		height: 508px;
+		position: absolute;
+		top: 52px;
+		left: 0px;
+	}
+	.page-middle .cont .login-panel .login-form {
+	    width: 302px;
+	    height:auto;
+	    margin: 30px auto 0;
+	}
+	.page-middle .cont .login-panel .login-form ul li {
+	    margin-top: 24px;
+	    position: relative;
+	}
+	.page-middle .cont .login-panel .login-form ul .err-msg {
+	    margin-top: 10px;
+	    margin-bottom:-5px;
+	    height: 12px;
+	    line-height: 12px;
+	    display: none;
+	}
+	.page-middle .cont .login-panel .login-form ul .err-msg b {
+	    display: block; 
+	    width: 12px;
+	    height: 12px;
+	    background: url(img/login_sprite.png) no-repeat -200px 0px;
+	    float: left;
+	    margin-right: 10px;
+	}	
+	.page-middle .cont .login-panel .login-form ul .err-msg span{
+		color: #d2041f;
+	    line-height: 12px;
+	    font-size: 12px;
+	    float: left;
+    }
+    .page-middle .cont .login-panel .login-form ul li.username .ltext {
+	    width: 100%;
+	    height: 36px;
+	    line-height: 36px;
+	    border: 1px solid #d8d8d8;
+	    color: #464646;
+	    padding: 5px 10px;
+	    font-size: 12px;
+	    position: relative;
+	    outline: none;
+	}
+	.page-middle .cont .login-panel .login-form ul li.username .ltext:focus{
+		border-color: #7fbfe7;
+	}
+	.page-middle .cont .login-panel .login-form ul li.username p{
+		font-size: 12px;
+		margin: 12px 0 -8px;
+    	color: #afafaf;
+    	display: none;
+	}
+	.page-middle .cont .login-panel .login-form ul li.username p a{
+		color: #005ba1;
+	}
+	.page-middle .cont .login-panel .login-form ul li.msgcode .ltext{
+		width: 165px;
+	    float: left;
+	    height: 36px;
+	    line-height: 36px;
+	    border: 1px solid #d8d8d8;
+	    color: #464646;
+	    padding: 5px 10px;
+	    font-size: 12px;
+	    position: relative;
+	    outline: none;
+	}
+	.page-middle .cont .login-panel .login-form ul li.msgcode input[type="password"]{
+		width: 300px;
+	}
+	.page-middle .cont .login-panel .login-form ul li.msgcode .ltext:focus{
+		border-color: #7fbfe7;
+	}
+	.page-middle .cont .login-panel .login-form ul li.msgcode a{
+		display: block;
+		float: right;
+		font-size: 13px;
+		color:#464646;
+	    width: 100px;
+	    height: 34px;
+	    line-height: 34px;
+	    text-decoration: none;
+	    background: #f7f7f9;
+	    border: 1px solid #ccc;
+	    text-align: center;
+	}
+	.page-middle .cont .login-panel .login-form ul li.check{
+		height: 20px;
+		line-height: 20px;
+		font-size:12px;
+		text-align: left;
+	}
+	.page-middle .cont .login-panel .login-form ul li.check b{
+		display: block;
+		float: left;
+		width: 16px;
+		margin-top: 2px;
+		margin-right:5px;
+		height: 16px;
+		cursor: pointer;
+		background: url(img/login_sprite.png) no-repeat;
+		background-position: -180px 0px;
+	}
+	.page-middle .cont .login-panel .login-form ul li.check a{
+		float: right;
+		color: #464646;
+	}
+	.page-middle .cont .login-panel .login-form ul li.check span{
+		float: right;
+		color: #464646;
+		padding: 0 5px;
+	}
+	.page-middle .cont .login-panel .login-form ul li.btn{
+		padding: 0 1px;
+	}
+	.page-middle .cont .login-panel .login-form ul li.btn button{
+		width: 300px;
+		height: 40px;
+    	line-height: 40px;
+    	border: none;
+    	outline: none;
+    	color: #fff;
+    	font-size: 14px;
+    	cursor: pointer;
+    	background: url(img/login_sprite.png) no-repeat;
+    	background-position: 0px -40px;
+	}
+	.page-middle .cont .login-panel .login-form ul li.btn button:hover{
+		background-position: 0px -90px;
+	}
+	.page-middle .cont .login-panel .login-info{
+		width: 300px;
+		margin: 0 auto;
+		margin-top: 20px;
+	}
+	.page-middle .cont .login-panel .login-info .optbar{
+		height: 20px;
+		line-height: 20px;
+		border-bottom: 1px solid #e7e7e7;
+		position: relative;
+		margin-bottom: 25px;
+	}
+	.page-middle .cont .login-panel .login-info .optbar span{
+		display: block;
+		width: 120px;
+		height: 20px;
+		line-height: 20px;
+		text-align: center;
+		background-color: #fff;
+		position: absolute;
+		top: 10px;
+		font-size: 12px;
+		left: 90px;
+	}
+	.page-middle .cont .login-panel .login-info ul{
+		width:270px;
+		height: 30px;
+		margin: 0 auto;
+	}
+	.page-middle .cont .login-panel .login-info ul li{
+		width: 30px;
+		height: 30px;
+		float: left;
+		margin-right: 30px;
+		background: url(img/login_sprite.png) no-repeat;
+	}
+	.page-middle .cont .login-panel .login-info ul li.qq{
+		background-position: 0 0;
+	}
+	.page-middle .cont .login-panel .login-info ul li.wechat{
+		background-position: -30px 0;
+	}
+	.page-middle .cont .login-panel .login-info ul li.microblog{
+		background-position: -60px 0;
+	}
+	.page-middle .cont .login-panel .login-info ul li.pay{
+		background-position: -90px 0;
+	}
+	.page-middle .cont .login-panel .login-info ul li.pingan{
+		background-position: -120px 0;
+		margin-right: 0px;
+	}
+	.page-middle .cont .login-panel a.codego{
+		display: block;
+		width: 60px;
+		height: 60px;
+		background: url(img/login_sprite.png) no-repeat 0 -400px;
+		position: absolute;
+		bottom: 0px;
+		right: 0px;
+	}
+	.page-middle .cont .login-panel a#code-pass{
+		background: url(img/login_sprite.png) no-repeat -70px -400px;
+	}
+	.page-middle .cont .login-panel a.ewmg{
+		display: block;
+		width: 85px;
+		height: 25px;
+		background: url(img/login_sprite.png) no-repeat 0 -360px;
+		position: absolute;
+		bottom: 12px;
+		right: 55px;
+	}
+	.page-middle .cont .login-panel a#ewpass{
+		background: url(img/login_sprite.png) no-repeat -100px -360px;
+	}
+	.page-footer{
+		width: 1200px;
+		height: 100px;
+		margin: 0 auto;
+		margin-top: 10px;
+	}
+	.page-footer .footer-xiu{
+		height: 18px;
+		padding-top: 15px;
+		text-align: center;
+		font-size: 12px;
+	}
+	.page-footer .footer-xiu a{
+		color: #464646;
+	}
+	.page-footer .footer-xiu b{
+		color: #999;
+		padding: 0 5px;
+		font-weight: normal;
+	}
+	.page-footer .footer-copyright{
+		text-align: center;
+		padding-top: 20px;
+		color: #999;
+		font-size: 12px;
+		font-family: "微软雅黑";
+	}
+</style>
+<script>
+	$(function(){
+		/*复选框点击*/
+		var index=0;
+		$("li.check b").click(function(){
+			if(index==0){
+				$(this).css("background-position","-160px 0px");
+				index=1;
+			}else{
+				$(this).css("background-position","-180px 0px");
+				index=0;
+			}
+		});
+		/*tab切换*/
+		$(".login-box:gt(0)").hide();
+		$(".login-tab li").click(function(){
+			var times=$(this).index();
+			$(this).addClass("link").siblings("li").removeClass("link");
+			$(".login-box").eq(times).show().siblings(".login-box").hide()
+		})
+		
+	})
+</script>

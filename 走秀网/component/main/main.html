@@ -1,0 +1,389 @@
+ 	<!-- Swiper -->
+<div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href=""><img src="img/0503banner.jpg"/></a></div>
+            <div class="swiper-slide"><a href=""><img src="img/0504banner2.jpg"/></a></div>
+            <div class="swiper-slide"><a href=""><img src="img/0504banner3.jpg"/></a></div>
+            <div class="swiper-slide"><a href=""><img src="img/0503banner4.jpg"/></a></div>
+            <div class="swiper-slide"><a href=""><img src="img/0423banner5.jpg"/></a></div> 
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+   	<!--首页快捷入口-->
+   	<div class="home_shortcut-main">
+    	<ul>
+    		<li></li>
+    		<li></li>
+    		<li></li>
+    		<li></li>
+    	</ul>
+   	</div>
+	
+<!--右边导航-->
+<div class="rightNav-main">
+	<img src="img/0506right.png"/>
+</div>	
+<!--尖货推荐-->
+<div class="goodesfirst-main">
+	<h3><img src="img/goods_t.jpg"></h3>
+	<ul class="first-main">
+		<li ng-repeat="g in goodesfir">
+			<img ng-src="{{g.goodsListImg}}" />
+		</li>
+	</ul>
+	<ul class="first-main">
+		<li ng-repeat="g in goodessec">
+			<img ng-src="{{g.goodsListImg}}" />
+		</li>
+	</ul>
+	<ul class="first-main">
+		<li ng-repeat="g in goodesthr">
+			<img ng-src="{{g.goodsListImg}}" />
+		</li>
+	</ul>
+	<ul class="first-main">
+		<li ng-repeat="g in goodesfour">
+			<img ng-src="{{g.goodsListImg}}" />
+		</li>
+	</ul>
+	<ul class="first-main" id="five">
+		<li ng-repeat="g in goodesfive">
+			<img ng-src="{{g.goodsListImg}}" />
+		</li>
+	</ul>
+</div>
+<!--热推专题-->
+<div class="goodessecond-main">
+	<h3><img src="img/topic_t.jpg"/></h3>
+	<ul class="second-main">
+		<li>
+			<a href="javascript:;">
+				<img src="img/pic1.jpg" alt="" />
+				<p>
+					<img src="img/pic_01.png"/>
+				</p>
+			</a>
+		</li>
+		<li>
+			<a href="javascript:;">
+				<img src="img/pic2.jpg" alt="" />
+				<p>
+					<img src="img/pic_02.png"/>
+				</p>
+			</a>
+		</li>
+		<li>
+			<a href="javascript:;">
+				<img src="img/pic3.jpg" alt="" />
+				<p>
+					<img src="img/pic_03.png"/>
+				</p>
+			</a>
+		</li>
+		<li>
+			<a href="javascript:;">
+				<img src="img/pic4.jpg" alt="" />
+				<p>
+					<img src="img/pic_04.png"/>
+				</p>
+			</a>
+		</li><li>
+			<a href="javascript:;">
+				<img src="img/pic5.jpg" alt="" />
+				<p>
+					<img src="img/pic_05.png"/>
+				</p>
+			</a>
+		</li>
+		<li>
+			<a href="javascript:;">
+				<img src="img/pic6.jpg" alt="" />
+				<p>
+					<img src="img/pic_06.png"/>
+				</p>
+			</a>
+		</li>
+	</ul>
+	<h4>
+		<img src="img/topic_m.jpg"/>
+	</h4>
+</div>
+<!--走秀豪车-->
+<div class="goodesthird-main">
+	<a href="javascript:;"><img src="img/0424auto.jpg"/></a>
+</div>
+<!--发现好货-->
+<div class="goodesfour-main">
+	<h3>
+		<img src="img/found_t.jpg"/>
+	</h3>
+	<ul class="good-stuff">
+		<li ng-repeat="g in goodessix">
+			<a href="javascript:;">
+				<img ng-src="{{g.goodsListImg}}" />
+				<p>
+					<span ng-bind="g.goodsName | namefilter:15"></span>
+					<b ng-bind="g.price | currency:'￥'"></b>
+				</p>
+			</a>
+		</li>
+		<li ng-repeat="g in goodesseven">
+			<a href="javascript:;">
+				<img ng-src="{{g.goodsListImg}}" />
+				<p>
+					<span ng-bind="g.goodsName | namefilter:15"></span>
+					<b ng-bind="g.price | currency:'￥'"></b>
+				</p>
+			</a>
+		</li>
+	</ul>
+	<h4>
+		<img src="img/fonud_m.jpg"/>
+	</h4>
+</div>
+<style type="text/css">
+	html, body {
+        position: relative;
+        height: 100%;
+    }
+    body {
+        background: #fff;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+    }
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .home_shortcut-main{
+	width: 1200px;height: 106px; margin: 0 auto;
+	} 
+	.home_shortcut-main ul li{
+		width: 250px;
+		height: 86px;
+		cursor: pointer;
+		position: relative;
+		float: left;
+		margin-top:10px;
+		background:url(img/shortcut3a.jpg) no-repeat;
+		margin-left: 45px;
+		}
+	.home_shortcut-main li:nth-child(1){
+		background-position:-8px 0px;
+		}
+	.home_shortcut-main li:nth-child(2){
+		background-position:-258px 0px;
+		}
+	.home_shortcut-main li:nth-child(3){
+		background-position:-746px 0px;
+		}
+	.home_shortcut-main li:nth-child(4){
+		float:right;
+		margin-left: 0px;
+		background-position:-997px 0px;
+		}
+	.swiper-container-horizontal>.swiper-pagination .swiper-pagination-bullet{
+		width:15px;height:15px;
+		}
+	
+	.rightNav-main{
+		width: 88px;
+		height: 234px;
+		position: fixed;
+		top: 195px;
+		right: -17px;
+		z-index: 100;
+	}
+	.goodesfirst-main{
+		width: 1200px;
+		min-height: 300px;
+		margin: auto;
+	}
+	.goodesfirst-main h3{
+		margin: 0;
+		height: 60px;
+		padding-bottom: 20px;
+		text-align: center;
+	}
+	.goodesfirst-main .first-main{
+		width: 100%;
+		height: 600px;
+		margin-bottom: 40px;
+	}
+	.goodesfirst-main ul#five{
+		height: 900px;
+	}
+	.goodesfirst-main .first-main li{
+		width: 400px;
+		height: 300px;
+		float: left;
+		cursor: pointer;
+	}
+	.goodesfirst-main .first-main li img{
+		width: 400px;
+		height: 300px;
+	}
+	.goodesfirst-main .first-main li img:hover{
+		opacity: .8;
+	}
+	.goodessecond-main{
+		width: 1200px;
+		margin: auto;
+	}
+	.goodessecond-main h3{
+		width: 100%;
+		text-align: center;
+		height: 60px;
+		padding-bottom: 20px;
+	}
+	.goodessecond-main .second-main{
+		width: 100%;
+		height: 1020px;
+	}
+	.goodessecond-main .second-main li{
+		float: left;
+		width: 600px;
+		height: 300px;
+		margin-bottom: 40px;
+	}
+	.goodessecond-main .second-main li a{
+		position: relative;
+		display: block;
+		width: 600px;
+		height: 300px;
+		overflow: hidden;
+	}
+	.goodessecond-main .second-main li a:hover>img{
+		transform: scale(1.1);
+		transform-origin: center;
+		transition: all 1s;
+	}
+	.goodessecond-main .second-main li a p{
+		position: absolute;
+		width: 100%;
+		height: 80px;
+		top: 110px;
+		text-align: center;
+	}
+	.goodessecond-main h4{
+		width: 100%;
+		text-align: center;
+		padding-bottom: 20px;
+		height: 55px;
+	}
+	.goodesthird-main{
+		width: 1200px;
+		height: 470px;
+		padding: 20px 0px 50px 0px;
+		margin: auto;
+	}
+	.goodesthird-main a{
+		display: block;
+		width: 100%;
+		height: 400px;
+	}
+	.goodesfour-main{
+		width: 1200px;
+		margin: auto;
+	}
+	.goodesfour-main h3{
+		width: 100%;
+		text-align: center;
+		height: 60px;
+		padding-bottom: 20px;
+	}
+	.goodesfour-main .good-stuff{
+		width: 1217px;
+		height: 2040px;
+		margin-bottom: 20px;
+	}
+	.goodesfour-main .good-stuff li{
+		width: 287px;
+		height: 490px;
+		float: left;
+		margin: 0 17px 20px 0;
+		border: 1px solid #fff;
+		position: relative;
+	}
+	.goodesfour-main .good-stuff li a{
+		display: block;
+		height: 490px;
+		border: 1px solid #efefef;
+	}
+	.goodesfour-main .good-stuff li a img{
+		width: 100%;
+		height: 385px;
+		border-bottom: 1px solid #efefef;
+	}
+	.goodesfour-main .good-stuff li a p{
+		width: 100%;
+		height: 105px;
+		padding: 15px;
+	}
+	.goodesfour-main .good-stuff li a p span{
+		color: #999;
+		line-height: 40px;
+		display: block;
+	}
+	.goodesfour-main .good-stuff li a p b{
+		color: #777777;
+		display: block;
+		line-height: 40px;
+	}
+	.goodesfour-main .good-stuff li:hover{
+		border: 1px solid #d5d5d5;
+	}
+	.goodesfour-main .good-stuff li:hover a{
+		border: 1px solid #d5d5d5;
+	}
+	.goodesfour-main h4{
+		width: 100%;
+		text-align: center;
+		padding-bottom: 20px;
+		height: 55px;
+	}
+</style>
+<script>
+	
+    $(function(){
+    		/*插件*/
+	    	var swiper = new Swiper('.swiper-container', {
+	        pagination: '.swiper-pagination',
+	        slidesPerView: 1,
+	        paginationClickable: true,
+	         autoplay:3000 ,
+	        spaceBetween: 30,
+	        loop: true
+	    });
+    	/*动画移动*/
+	   	$(".home_shortcut-main li").mouseover(function(){
+	   		$(this).animate({"left":"-20px"},500)
+	   	}).mouseout(function(){
+	   		$(this).animate({"left":"0px"},500)
+	   	})
+    });
+   
+    </script>

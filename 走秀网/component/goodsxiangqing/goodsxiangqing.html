@@ -1,0 +1,605 @@
+<div class="banner">
+	<div class="bannerN">
+		<a href=""><img src="img/ouzhou.jpg"/></a>
+	</div>
+</div>
+<ui-view></ui-view>
+<div class="myWei">
+	<span><i></i>您的位置：</span>
+	<ul>
+		<li><span></span><a href="">走秀首页</a></li>
+		<li><span></span><a href="">衬衫</a></li>
+		<li><span></span><a href="">韩版衬衫<i></i></a></li>
+		<li><a href="">衬衫<i></i></a></li>
+	</ul>
+	<p>总共<span>1550</span>件商品</p>
+</div>
+<div class="myFen">
+	<div class="myFen_f">
+		<span>分类：</span>
+	</div>
+	<p><a href="">手提包</a></p>
+</div>
+<div class="myPin">
+	<div class="myPin_s">
+		<span>品牌：</span>
+	</div>
+	<div class="myPin_li">
+		<ul>
+			<li><a href="">Baljh</a></li>
+			<li><a href="">Copfipdpfo</a></li>
+			<li><a href="">Nladf</a></li>
+			<li><a href="">Pkfgk</a></li>
+			<li><a href="">Qkdgop</a></li>
+			<li><a href="">Yjaksdf</a></li>
+			<li><a href="">Mafdk</a></li>
+			<li><a href="">ofdpg</a></li>
+			<li><a href="">3.1 Qfk ld</a></li>
+			<li><a href="">3.1 Qfk ld</a></li>
+			<li><a href="">Mafdk</a></li>
+			<li><a href="">ofdpg</a></li>
+			<li><a href="">3.1 Qfk ld</a></li>
+			<li><a href="">3.1 Qfk ld</a></li>
+			<li><a href="">Mafdk</a></li>
+			<li><a href="">ofdpg</a></li>
+			<li><a href="">3.1 Qfk ld</a></li>
+			<li><a href="">3.1 Qfk ld</a></li>
+			<li><a href="">Mafdk</a></li>
+			<li><a href="">ofdpg</a></li>
+			<li><a href="">3.1 Qfk ld</a></li>
+			<li><a href="">3.1 Qfk ld</a></li>
+		</ul>
+	</div>
+	<div class="myPin_x">
+		<a href="">多选</a>
+		<a href="">展开</a>
+	</div>
+</div>
+<div class="myjia">
+	<div class="myFen_f">
+		<span>分类：</span>
+	</div>
+	<div class="myjia_N">
+		<ul>
+			<li><a href="">500-1000元</a></li>
+			<li><a href="">1000-3000元</a></li>
+			<li><a href="">3000-5000元</a></li>
+			<li><a href="">5000-8000元</a></li>
+			<li><a href="">8000元以上</a></li>
+		</ul>
+		<div class="myjia_zd">
+			<span>自定义：</span>
+			<input type="text" name="" id="" value="" /> -
+			<input type="text" name="" id="" value="" />
+			<button>确定</button>
+		</div>
+	</div>
+</div>
+<div class="myPin myColor">
+	
+		<div class="myPin_s myColor-s">
+			<span>品牌：</span>
+		</div>
+		<div class="myPin_li myColor-li">
+			<ul>
+				<li><a href="">黑色</a></li>
+				<li><a href="">红色</a></li>
+				<li><a href="">蓝色</a></li>
+				<li><a href="">粉色</a></li>
+				<li><a href="">棕色</a></li>
+				<li><a href="">白色</a></li>
+				<li><a href="">灰色</a></li>
+				<li><a href="">其他</a></li>
+				<li><a href="">黄色</a></li>
+				<li><a href="">绿色</a></li>
+			</ul>
+		</div>
+		<div class="myPin_x">
+			<a href="">多选</a>
+			<a href="">展开</a>
+		</div>
+</div>
+<div class="jing"></div>
+<div class="jingxuan">
+	<p>精简选项</p>
+</div>
+<div class="chenXiang">
+	<div class="chenxiang-top">
+		<ul>
+			<li class="active"><a href="">默认</a></li>
+			<li><a href="">价格</a></li>
+			<li><a href="">折扣</a></li>
+			<li><a href="">上架时间</a></li>
+		</ul>
+		<div class="chenxiang-fa">
+			发货方式：
+			<input type="radio" name="fa" id="quan"  checked="" /><label for="quan">全部</label>
+			<input type="radio" name="fa" id="a"/><label for="a">海外发货</label>
+			<input type="radio" name="fa" id="b" /><label for="b">国内发货</label>
+		</div>
+		<div class="chenxiang-minpage">
+			<ul>
+				<li><a href="">1/4</a></li>
+				<li><a href="">上一页</a></li>
+				<li><a href="">下一页</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="chenXiang-N">
+		<ul  >
+			<li ng-repeat="good in goodslist" ui-sref=".details">
+				<img ng-src="{{good.goodsListImg}}"/>
+				<div class="chenXiang-N-sall">
+					<p>可售尺码：</p>
+					<p>均码</p>
+				</div>
+				<div class="chenXiang-N-name">
+					<p>Michael Kors</p>
+					<p ng-bind="good.goodsName"></p>
+					<span ng-bind="good.price | currency"></span><span>￥566</span>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="clear"></div>
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	.clear{
+		clear: both;
+	}
+	.banner{
+		width: 100%;
+		height: 60px;
+		margin-top: 10px;
+	}
+	.bannerN{
+		width: 1000px;
+		height: 60px;
+		margin: 0 auto;
+		
+	}
+	.myWei{
+		width: 1000px;
+		height: 29px;
+		margin: 10px auto 0;
+		font-size: 12px;
+		line-height: 29px;
+	}
+	.myWei>span{
+		display: block;
+		position: relative;
+		float: left;
+		padding-left: 10px;
+	}
+	.myWei>span>i{
+		display: inline-block;
+	    width: 6px;
+	    height: 7px;
+	    font-style: normal;
+	   	position: absolute;
+	    top: 10px;
+	    left: 0px;
+	    line-height: 0;
+	    margin-right: 5px;
+		background: url(img/xsearchico20120615.png) no-repeat 0 0;
+	}
+	.myWei ul{
+		float: left;
+	}
+	.myWei ul li{
+		display:inline-block;
+		height: 29px;
+		line-height: 29px;
+	}
+	.myWei ul li a{
+		font-size: 12px;
+		color: #00579d;
+	}
+	.myWei ul li a:nth-of-type(3){
+		position: relative;
+	}
+	.myWei ul li a:nth-of-type(4){
+		position: relative;
+	}
+	.myWei ul li a>i{
+		background: url(img/xia.jpg) no-repeat right;
+		width: 7px;
+	    height: 4px;
+	    display: inline-block;
+	    margin-left: 3px;
+	    margin-top: -2px;
+	    vertical-align: middle;
+	}
+	.myWei ul li>span{
+		background: url(img/jts.jpg);
+		display: block;
+	    width: 6px;
+	    height: 13px;
+	    overflow: hidden;
+	    margin: 6px 4px 0px 10px;
+	    float: right;
+	}
+	.myWei p{
+		float: right;
+	}
+	.myWei p>span{
+		color: #f00;
+	}
+	.myFen{
+		width: 1000px;
+		height: 43px;
+		border: 1px solid #ccc;	
+		margin: 0 auto;
+		line-height: 43px;
+		font-size: 12px;
+	}
+	.myFen_f{
+		width: 80px;
+		height: 43px;
+		background: #F9F9F9;
+		padding-left: 10px;
+		float: left;
+	}
+	.myFen span{
+		width: 60px;
+		padding-left: 10px;
+		background: url(img/xsearchico20120615.png) no-repeat left -458px;
+	}
+	.myFen p{
+		height: 41px;
+		background: white;
+		float: left;
+		margin-left: 15px;
+	}
+	.myFen p>a{
+		color: #6e6c6d;
+		display: inline-block;
+		height: 20px;
+		line-height: 20px;
+		padding: 0 5px 0 5px;
+	}
+	.myFen p>a:hover{
+		background: #e97013;
+		color: white;
+	}
+	.myPin{
+		width: 1000px;
+		height:75px ;
+		margin: 0 auto;
+		border: 1px solid #ccc;	
+		font-size: 12px;
+		position: relative;
+	}
+	.myPin_s{
+		width: 80px;
+		height: 73px;
+		background: #F9F9F9;
+		padding:10px 0 0 10px ;
+		float: left;
+	}
+	.myPin_li{
+		background: #efefef;
+		float: left;
+		width: 918px;
+		height: 73px;
+		padding-left: 10px;
+		padding-top: 5px;
+		overflow: hidden;
+		
+	}
+	.myPin_li ul{
+		width: 895px;
+	}
+	.myPin_li ul li{
+		display: inline-block;
+		width: 175px;
+	    height: 32px;
+	    padding: 5px 10px 7px 5px;
+	}
+	.myPin_li ul li>a{
+	    height: 20px;
+		display: inline-block;
+		line-height: 20px;
+		padding:0 5px 0 5px;
+		color:  #6e6c6d;
+	}
+	.myPin_li ul li>a:hover{
+		background: #e97013;
+		color: white;
+	}
+	.myPin_x{
+		position: absolute;
+		top: 10px;
+		right: 10px;
+	}
+	.myPin_x a{
+		display: inline-block;
+		height: 20px;
+		line-height: 20px;
+		padding-left: 20px;
+	}
+	.myPin_x a:nth-of-type(1){
+		background: url(img/xsearchico20120615.png) no-repeat 0 -516px;
+	}
+	.myPin_x a:nth-of-type(1):hover{
+		color:#e97013 ;
+		background: url(img/xsearchico20120615.png) no-repeat 0 -536px;
+	}
+	.myPin_x a:nth-of-type(2){
+		background: url(img/xsearchico20120615.png) no-repeat 0 -16px;
+	}
+	.myPin_x a:nth-of-type(2):hover{
+		color:#e97013 ;
+		background: url(img/xsearchico20120615.png) no-repeat 0 -36px;
+	}
+	.myjia{
+		width: 1000px;
+		height:46px ;
+		margin: 0 auto;
+		border: 1px solid #ccc;	
+		font-size: 12px;
+		line-height: 46px;
+	}
+	.myjia_N {
+		float:left;
+		width:918px ;
+		height: 43px;
+		padding-left: 10px;
+		position: relative;
+	}
+	.myjia_N ul{
+		float: left;
+	}
+	.myjia_N  li{
+		display: inline-block;
+		height: 25px;
+		line-height: 25px;
+		padding: 0 10px 0 5px;
+	}
+	.myjia_N  li>a{
+		display: inline-block;
+		height: 20px;
+		line-height: 20px;
+		padding: 0 5px 0 5px;
+		color: #6e6c6d;
+	}
+	.myjia_N  li>a:hover{
+		color: white;
+		background: #e97013;
+	}
+	.myjia_zd {
+		width: 216px;
+		height: 31px;
+		float: left;
+		position: absolute;
+	    right: 120px;
+	    top: 3px;
+	}
+	.myjia_zd input{
+		width: 37px;
+		height: 22px;
+		text-align: center;
+		outline: none;
+	}
+	.myColor{
+		display: none;
+		height: 43px;
+		border: 1px solid #ccc;
+	}
+	.myPin .myColor{
+		height: 43px;
+		border: 1px solid #ccc;
+	}
+	.myColor .myColor-li li{
+		width: 75px;
+		height: 25px;
+	}
+	.myColor .myColor-li {
+		height: 43px;
+	}
+	.myColor .myColor-s{
+		height: 43px;
+		line-height: 43px;
+		padding: 0 10px 0 10px;
+	}
+	.jing{
+		background: #efefef;
+		height: 5px;
+		margin: 0 auto;
+		width: 1000px;
+		border: 1px solid #ccc;
+	   
+	}
+	.jingxuan{
+		width: 1000px;
+		height: 24px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.jingxuan p{
+		width: 274px;
+		height: 24px;
+		background:  #efefef;
+		margin: 0 auto;
+		font-size: 12px;
+		color: #6e6e6e;
+		line-height: 24px;
+		border: 1px solid #ccc;
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+		border-top: none;
+		background-image: url(img/xsearchico20120615.png) ;
+		background-repeat: no-repeat;
+		background-position: 255px -584px;
+		cursor: pointer;
+	}
+	.chenXiang{
+		width: 1000px;
+		height: ;
+		margin: 20px auto;
+		font-size: 12px;
+	}
+	.chenXiang .chenxiang-top{
+		height: 40px;
+		width: 100%;
+		background-image: url(img/xsearch20120615.png) ;
+		background-position: 0 -135px;
+		background-repeat: repeat-x;
+		border-width: 2px 1px 1px;
+	    border-color: #ff6602 #D7D7D7 #D7D7D7;
+	    border-style: solid;
+	    line-height: 40px;
+	    margin-bottom: 20px;
+	}
+	.chenXiang .chenxiang-top ul{
+		margin-left: 20px;
+		margin-top: 8px;
+		margin-right: 30px;
+		float: left;
+	}
+	.chenXiang .chenxiang-top>ul>li{
+		float: left;
+		height: 22px;
+		line-height: 22px;
+		padding: 0 16px 0 16px;
+		border: 1px solid #ccc;
+	}
+	.chenXiang .chenxiang-top ul li a{
+		color: #333;
+	}
+	.chenXiang .chenxiang-top ul li.active{
+	    background: #efefef;
+	}
+	.chenXiang .chenxiang-top ul li a:hover{
+	   	color: #f60;
+	}
+	.chenXiang .chenxiang-top ul li.active a{
+	   	color: #f60;
+	}
+	.chenXiang .chenxiang-top .chenxiang-fa{
+		float: left;
+		
+	}
+	.chenXiang .chenxiang-top .chenxiang-fa input{
+		vertical-align: middle;
+		margin-right: 5px;
+	}
+	.chenXiang .chenxiang-top .chenxiang-minpage{
+		float:right;
+		height: 40px;
+	}
+	.chenXiang .chenxiang-top .chenxiang-minpage li{
+		display: inline-block;
+		border: none;
+		padding: 0;
+	}
+	.chenXiang .chenxiang-top .chenxiang-minpage li>a{
+		display: inline-block;
+		height: 22px;
+		padding: 0 10px 0 10px;
+	}
+	.chenXiang .chenxiang-top .chenxiang-minpage li:nth-of-type(2)>a{
+		background-image: url(img/xsearchico20120615.png) ;
+		background-position: 0 -434px ;
+		background-repeat: no-repeat;
+	}
+	.chenXiang .chenxiang-top .chenxiang-minpage li:nth-of-type(3)>a{
+		background-image: url(img/xsearchico20120615.png) ;
+		background-position: 51px -454px;
+		background-repeat: no-repeat;
+	}
+	.chenXiang-N{
+		width: 100%;
+		color: #6e6e6e;
+	}
+	.chenXiang-N img{
+		width: 234px;
+		height: 314px;
+		
+	}
+	.chenXiang-N ul{
+		width: 1000px;
+		border: 2px solid white;
+		position: relative;
+		float: left;
+	}
+	.chenXiang-N ul li{
+		border: none;
+		width: 234px;
+		height: 387px;
+		float: left;
+	}
+	.chenXiang-N .chenXiang-N-sall{
+		width: 100%;
+		height: 70px;
+		background: rgba(251,249,253,.9)!important;
+	    border-bottom: 1px solid #e8e8e8;
+	    left: 1px;
+	    padding: 10px 10px 0 10px;
+	    opacity: 0.9;
+	    display: none;
+	    position: absolute;
+	    left: 1px;
+	    bottom: 72px;
+	    z-index: 999;
+	}
+	
+	.chenXiang-N .chenXiang-N-sall>p{
+		line-height:2;
+	}
+	.chenXiang-N .chenXiang-N-sall>p:nth-of-type(2){
+		border: 1px solid #ccc;
+		padding: ;
+		height: 24px;
+		line-height: 24px;
+		padding: 0 5px 0 5px;
+		float: left;
+		
+	}
+	.chenXiang-N .chenXiang-N-name{
+		padding: 10px 10px 0 10px;
+		color: #666;
+	}
+	
+	.chenXiang-N .chenXiang-N-name p:nth-of-type(2){
+		margin-bottom: 5px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		margin-top: 5px;
+	}
+	.chenXiang-N .chenXiang-N-name span:nth-of-type(1){
+		font-size: 18px;
+	    font-weight: bold;
+	    color: #D80C18;
+	    margin-right: 10px;
+	}
+	.chenXiang-N .chenXiang-N-name span:nth-of-type(2){
+		font-size: 14px;
+	    color: #a2a2a2;
+	    text-decoration: line-through;
+	}
+</style>
+<script>
+	//jingxuan 的显示与隐藏
+	$(".jingxuan p").click(function(){
+		$(".jingxuan p").css("background-position","255px -562px");
+		if($(".myColor").css("display")=="none"){
+			$(".myColor").css("display","block");
+		}else{
+			$(".myColor").css("display","none");
+			$(".jingxuan p").css("background-position","255px -584px");
+		}
+	})
+	//chenXiang-N-sall 显示
+	$(".chenXiang-N ul li").mouseenter(function(){
+		$(".chenXiang-N .chenXiang-N-sall").slideDown();
+	}).mouseleave(function(){
+		$(".chenXiang-N .chenXiang-N-sall").slideUp();
+	})
+</script>
