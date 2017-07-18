@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+ul {
+	list-style: none;
+}
+.enter {
+	display: block;
+	height: 75px;
+	width: 161px;
+	position: relative;
+	overflow: hidden;
+	background: #90275a url(img/jiantou.png) 120px center no-repeat;
+}
+.enter.jp {
+	background-color: #6CC;
+}
+.enter .sli, .links .enter .sli {
+	position: absolute;
+	left: 161px;
+	top: 0;
+	transition: left ease-in-out 0.3s;
+	-moz-transition: left ease-in-out 0.3s;
+	-ms-transition: left ease-in-out 0.3s;
+	-o-transition: left ease-in-out 0.3s;
+	-webkit-transition: left ease-in-out 0.3s;
+}
+.enter:hover .sli {
+	left: 0;
+}
+.enter .bg {
+	display: block;
+	margin-left: 15px;
+	margin-top: 15px;
+}
+.links {
+	width: 636px;
+	height: 481px;
+	background-image: url(img/img1.jpg);
+}
+.links .enter {
+	display: block;
+	height: 160px;
+	width: 160px;
+	margin-left: 158px;
+	float: left;
+	background-color: transparent;
+	background-image: none;
+}
+.links .enter .sli {
+	height: 160px;
+	width: 160px;
+	background: #321a3e url(img/enter.png) center center no-repeat;
+}
+.links .e3 {
+	margin-left: 0;
+}
+.links .e2 .sli {
+	background-color: #26415c;
+}
+.links .e3 .sli {
+	background-color: #50586b;
+}
+.links .e4 .sli {
+	background-color: #78404d;
+}
+.links .e5 .sli {
+	background-color: #c66c47;
+}
+.links .e6 .sli {
+	background-color: #b29762;
+}
+</style>
+<script src="js/jquery.min.js"></script>
+<script>
+$(function(){
+	$(".links").hover(
+	function(){$(this).css("background-image","url(img/jj.jpg)")},
+	function(){$(this).css("background-image","url(img/img1.jpg)")})
+	})
+</script>
+</head>
+
+<body>
+<a href="#" class="enter jc"> <img src="img/jc1.png" class="bg"> <span class="sli"><img src="img/ba_03.png"></span> </a> <br/>
+<br/>
+<div class="links">
+    <a href="#" class="enter e1"> <span class="sli"></span> </a>
+    <a href="#" class="enter e2"> <span class="sli"></span> </a> 
+    <a href="#" class="enter e3"> <span class="sli"></span> </a>
+    <a href="#" class="enter e4"> <span class="sli"></span> </a>
+    <a href="#" class="enter e5"> <span class="sli"></span> </a>
+    <a href="#" class="enter e6"> <span class="sli"></span> </a> 
+</div>
+
+</body>
+</html>

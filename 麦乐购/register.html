@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/register.css" />
+    <script src="js/jquery-3.1.1.min.js"/></script>
+    <script src="js/first.js"></script>
+</head>
+<body>
+<div id="login">
+    <div id="top">
+        <img src="images/logo.gif"/>
+        <div id="top-right">
+            <img src="images/registerAuthenticPic.png"/>
+        </div>
+    </div>
+    <div id="main">
+        <div class="main-left">
+            <img src="images/wei.png"/>
+        </div>
+        <div class="main-right">
+            <h3>新用户注册
+                <span>已有麦乐购帐号，<a href="javascript:;" class="login">直接登录</a></span>
+            </h3>
+            <ul>
+                <li>
+                    <input type="text" placeholder="手机号/邮箱/用户名" id="user" title="手机号/邮箱/用户名">
+                    <p class="color" id="p1"></p>
+                </li>
+                <li>
+                    <input type="password" placeholder="请输入密码" id="pass" title="密码">
+                    <p class="color" id="p2"></p>
+                </li>
+                <li>
+                    <input type="password" placeholder="请再次输入密码" id="pass1" title="密码">
+                    <p class="color" id="p3"></p>
+                </li>
+                <li class="short">
+                    <input type="text" placeholder="验证码" id="yzm">
+                    <img src="images/verifyImg%20(1).aspx" title="点击刷新验证码"/>
+                    <a href="" style="margin-top: 10px">换一张</a>
+                    <p class="color" id="p4"></p>
+                </li>
+                <li class="short">
+                    <input type="text" placeholder="短信校验码" id="yzm2">
+                    <a href="" id="yz">获取短信校验码</a>
+                    <p class="color" id="p5"></p>
+                </li>
+                <li style="height: 20px">
+                    <input type="checkbox" style="width: 13px;height: 13px;margin-right: 5px" checked>已阅读并同意<a href="" >《麦乐购注册协议及交易条款》</a></li>
+                <li style="height: 40px">
+                    <input type="submit" value="立即注册" id="submit">
+                </li>
+                <li>
+                    <p id="ts">收不到短信?请使用<a href="">语音验证码</a></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p class="first">
+            <a href="">关于麦乐购</a><span>|</span>
+            <a href="">保税店专区</a><span>|</span>
+            <a href="">服务条款</a><span>|</span>
+            <a href="">商户合作</a><span>|</span>
+            <a href="">O2O合作</a><span>|</span>
+            <a href="">联系我们</a><span>|</span>
+            <a href="">友情链接</a><span>|</span>
+            <a href="">诚聘英才</a><span>|</span>
+            <a href="">手机麦乐购</a><span>|</span>
+            <a href="">建议意见</a><span>|</span>
+            <a href="">媒体报道</a>
+        </p>
+        <p style="margin-top: 10px" class="link">
+            <a href="">
+                <img src="images/gonganbeian.png" alt="">
+                京公网安备：11010102000812号
+            </a>
+            | 中华保险保单号：011644014602050D000001 | 中华人民共和国出版物经营许可证编号：150023 | 广电制作经营许可证：(京)字第06356号
+        </p>
+        <p class="link">网络文化经营许可证：京网文(2016)4048-509号 | 食品经营许可证编号：JY11101070034785 | 食品卫生许可证编号：110101_JX0020 | 互联网药品信息服务证书编号：(京)-2016-0095</p>
+        <p class="link">Copyright 2006 - 2016 北京麦乐购科技有限公司版权所有 | 经营许可证编号：京ICP证150027号 | 营业执照：911101010672694772 | 京ICP备14022296号 | 中国服务热线：400-666-6600</p>
+    </footer>
+</div>
+<div class="mask"></div>
+<div class="model">
+    <h3>系统繁忙请稍后再试</h3>
+    <i>×</i>
+</div>
+</body>
+<script>
+    $(function () {
+        $(".login").click(function () {
+           location.href="login.html";
+        })
+        $("#submit").click(function () {
+            var userV=$("#user").val();
+            var passV=$("#pass").val();
+            var pass1V=$("#pass1").val();
+            var yzmV=$("#yzm").val();
+            var yzm2V=$("#yzm2").val();
+            var reg=/^1\d{10}$/;
+            if(reg.test(userV)){
+                $("#p1").text("");
+
+            }else{
+                $("#p1").text("你输入的手机格式错误，请重新输入");
+            }
+            var reg=/^[A-Za-z0-9]{4,10}$/;
+            if(reg.test(passV)){
+                $("#p2").text("");
+            }else {
+                $("#p2").text("密码输入错误");
+            }
+            if(passV!=pass1V||pass1V==""){
+                $("#p3").text("密码不一致");
+
+            }else {
+                $("#p3").text("");
+            }
+            if(yzmV==""){
+                $("#p4").text("请输入验证码");
+            }else {
+                $("#p4").text("");
+            }
+            if(yzm2V==""){
+                $("#p5").text("你输入的短信验证码有误，请重新输入");
+            }else {
+                $("#p5").text("");
+            }
+            $.ajax({
+                url:"http://datainfo.duapp.com/shopdata/userinfo.php",
+                type:"get",
+                data:{
+                    "status":"register",
+                    userID:userV,
+                    password:passV,
+
+                },
+                dataType:"json",
+                error:function () {
+                   $(".mask").show();
+                    $(".model").show();
+                },
+                success:function (response) {
+
+                    if(response==0){
+                       /* $("#p1").text("你输入的账号已存在")*/
+                    }else if(response==1){
+                        location.href="login.html";
+                    } else if(response==2){
+                        $(".mask").show();
+                        $(".model").show();
+                    }
+                }
+            });
+        });
+    });
+</script>
+</html>

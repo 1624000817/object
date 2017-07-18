@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+*{margin:0; padding:0;}
+ul{ list-style:none;}
+.enter{ display:block; height:75px; width:161px; position:relative; overflow:hidden; background:#90275a url(img/jiantou.png) 120px center no-repeat;}
+.enter.jp{ background-color:#6CC;}
+.enter .sli{ position:absolute; left:161px; top:0; /*transition:left ease-in-out 0.3s;-moz-transition:left ease-in-out 0.3s;-ms-transition:left ease-in-out 0.3s;-o-transition:left ease-in-out 0.3s;-webkit-transition:left ease-in-out 0.3s;*/}
+.enter:hover .sli{ /*left:0;*/}
+.enter .bg{ display:block; margin-left:15px; margin-top:15px;}
+
+.links{ width:636px; height:481px; background-image:url(img/img1.jpg); background-repeat:no-repeat; overflow:hidden; }
+.links a{ display:block; height:160px; width:160px; margin-left:158px; float:left;position:relative; overflow:hidden; }
+.links a .sli{ display:block; width:160px; height:160px; position:absolute; left:160px; top:0;   background:#321a3e url(img/enter.png) center center no-repeat;transition:left ease-in-out 0.3s;}
+.links a:hover .sli{ left:0;}
+</style>
+<script src="js/jquery.min.js"></script>
+<script>
+$(function(){
+	$(".enter").hover(
+	function(){$(this).children(".sli").animate({left:0},400);},
+	function(){$(this).children(".sli").animate({left:161},400);})
+	$(".links").hover(
+	function(){$(this).css("background-image","url(img/jj.jpg)")},
+	function(){$(this).css("background-image","url(img/img1.jpg)")})
+	})
+</script>
+</head>
+
+<body>
+<a href="#" class="enter jc">
+	<img src="img/jc1.png" class="bg">
+	<span class="sli"><img src="img/ba_03.png"></span>
+</a>
+<br/>
+<a href="#" class="enter jc">
+	<img src="img/jc2.png" class="bg">
+	<span class="sli"><img src="img/ba_03.png"></span>
+</a>
+<br/><br/>
+<div class="links">
+
+<a href="#"><span class="sli"></span></a>
+<a href="#"><span class="sli"></span></a>
+<a href="#"><span class="sli"></span></a>
+<a href="#"><span class="sli"></span></a>
+<a href="#"><span class="sli"></span></a>
+<a href="#"><span class="sli"></span></a>
+
+</div>
+
+
+</body>
+</html>

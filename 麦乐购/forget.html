@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/forget.css" />
+    <script src="js/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<div id="login">
+    <div id="top">
+        <img src="images/logo.gif"/>
+        <div id="top-right">
+            <img src="images/registerAuthenticPic.png"/>
+        </div>
+    </div>
+</div>
+<div class="box">
+    <div class="lossSteep">
+        <ul>
+            <li class="hover">
+                <b>1</b>填写邮箱/手机
+            </li>
+            <li>
+                <b>2</b>验证身份
+            </li>
+            <li>
+                <b>3</b>设置新密码
+            </li>
+            <li>
+                <b>4</b>完成
+            </li>
+        </ul>
+    </div>
+    <div class="lossMain">
+        <div>
+            <label>邮箱/手机号:</label>
+            <input type="text" id="username" placeholder="请输入邮箱/手机号" title="请输入邮箱/手机号">
+            <p id="p1"></p>
+        </div>
+        <div>
+            <label>验证码:</label>
+            <input type="text" id="yz" placeholder="请输验证码" title="请输入邮箱/手机号">
+            <img src="images/verifyImg%20(2).aspx"/>
+            <a href="javascript;;">换一张</a>
+            <p></p>
+        </div>
+        <div>
+            <input type="button" value="下一步">
+        </div>
+    </div>
+</div>
+<footer>
+    <p class="first">
+        <a href="">关于麦乐购</a><span>|</span>
+        <a href="">保税店专区</a><span>|</span>
+        <a href="">服务条款</a><span>|</span>
+        <a href="">商户合作</a><span>|</span>
+        <a href="">O2O合作</a><span>|</span>
+        <a href="">联系我们</a><span>|</span>
+        <a href="">友情链接</a><span>|</span>
+        <a href="">诚聘英才</a><span>|</span>
+        <a href="">手机麦乐购</a><span>|</span>
+        <a href="">建议意见</a><span>|</span>
+        <a href="">媒体报道</a>
+    </p>
+    <p style="margin-top: 10px" class="link">
+        <a href="">
+            <img src="images/gonganbeian.png" alt="">
+            京公网安备：11010102000812号
+        </a>
+        | 中华保险保单号：011644014602050D000001 | 中华人民共和国出版物经营许可证编号：150023 | 广电制作经营许可证：(京)字第06356号
+    </p>
+    <p class="link">网络文化经营许可证：京网文(2016)4048-509号 | 食品经营许可证编号：JY11101070034785 | 食品卫生许可证编号：110101_JX0020 | 互联网药品信息服务证书编号：(京)-2016-0095</p>
+    <p class="link">Copyright 2006 - 2016 北京麦乐购科技有限公司版权所有 | 经营许可证编号：京ICP证150027号 | 营业执照：911101010672694772 | 京ICP备14022296号 | 中国服务热线：400-666-6600</p>
+</footer>
+</body>
+<script>
+    $(function () {
+        $("#username").blur(function () {
+            var userV=$("#username").val();
+            var reg=/^1\d{10}$/;
+            if(reg.test(userV)==false){
+               $("#p1").text("手机号错误")
+            }
+        });
+    })
+</script>
+</html>

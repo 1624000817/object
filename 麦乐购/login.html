@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/login.css" />
+    <script src="js/jquery-3.1.1.min.js"/></script>
+    <script src="js/first.js"></script>
+</head>
+<body>
+<div id="login">
+    <div id="top">
+        <img src="images/logo.gif"/>
+        <div id="top-right">
+            <img src="images/registerAuthenticPic.png"/>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div class="main-left">
+            <img src="images/wei.png"/>
+        </div>
+        <div class="main-right">
+            <h3>登录
+                <a href="javascript:;"class="register">免费快速注册</a>
+            </h3>
+            <ul>
+                <li>
+                    <label>
+                       <img src="images/user.png"/>
+                    </label>
+                    <input type="text" placeholder="手机号/邮箱/用户名" id="user" title="手机号/邮箱/用户名">
+                    <p class="color" id="p1"></p>
+                </li>
+                <li>
+                    <label>
+                        <img src="images/password.png"/>
+                    </label>
+                    <input type="password" placeholder="密码" id="pass" title="密码">
+                    <p class="color" id="p2"></p>
+                </li>
+                <li class="short">
+                    <input type="text" placeholder="验证码" id="yz">
+                    <img src="images/verifyImg.aspx" title="点击刷新验证码"/>
+                    <a href="">换一张</a>
+                    <p class="color" id="p3"></p>
+                </li>
+                <li style="height: 20px"><a href="javascript:;">忘记密码?</a></li>
+                <li style="height: 40px">
+                    <input type="submit" value="登录" id="submit">
+                </li>
+                <li>
+                    <p class="fangshi"><span>使用其他账号登录：</span>
+                        <a href=""><img src="images/qq.png"/></a>
+                        <a href=""><img src="images/zhifubao.png"/></a>
+                        <a href=""><img src="images/llq.png"/></a>
+                        <a href=""><img src="images/weibopng.png"/></a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p class="first">
+            <a href="">关于麦乐购</a><span>|</span>
+            <a href="">保税店专区</a><span>|</span>
+            <a href="">服务条款</a><span>|</span>
+            <a href="">商户合作</a><span>|</span>
+            <a href="">O2O合作</a><span>|</span>
+            <a href="">联系我们</a><span>|</span>
+            <a href="">友情链接</a><span>|</span>
+            <a href="">诚聘英才</a><span>|</span>
+            <a href="">手机麦乐购</a><span>|</span>
+            <a href="">建议意见</a><span>|</span>
+            <a href="">媒体报道</a>
+        </p>
+        <p style="margin-top: 10px" class="link">
+            <a href="">
+                <img src="images/gonganbeian.png" alt="">
+                京公网安备：11010102000812号
+            </a>
+            | 中华保险保单号：011644014602050D000001 | 中华人民共和国出版物经营许可证编号：150023 | 广电制作经营许可证：(京)字第06356号
+        </p>
+        <p class="link">网络文化经营许可证：京网文(2016)4048-509号 | 食品经营许可证编号：JY11101070034785 | 食品卫生许可证编号：110101_JX0020 | 互联网药品信息服务证书编号：(京)-2016-0095</p>
+        <p class="link">Copyright 2006 - 2016 北京麦乐购科技有限公司版权所有 | 经营许可证编号：京ICP证150027号 | 营业执照：911101010672694772 | 京ICP备14022296号 | 中国服务热线：400-666-6600</p>
+    </footer>
+<div class="mask"></div>
+<div class="model">
+    <h3>系统繁忙请稍后再试</h3>
+    <i>×</i>
+</div>
+</body>
+<script>
+    $(function () {
+        $(".register").click(function () {
+            location.href="register.html"
+        });
+        $("#submit").click(function () {
+            var userV=$("#user").val();
+            var passV=$("#pass").val();
+            var yzV=$("#yz").val();
+            if(userV==""){
+                $("#p1").text("请输入账号");
+                return;
+            }else {
+                $("#p1").text("");
+            }
+            if(passV==""){
+                $("#p2").text("请输入密码");
+
+            }else {
+                $("#p2").text("");
+            }
+
+            $.ajax({
+                url:"http://datainfo.duapp.com/shopdata/userinfo.php",
+                type:"get",
+                data:{
+                    status:"login",
+                    userID:userV,
+                    password:passV,
+
+                },
+                dataType:"json",
+                error:function () {
+                    $(".mask").show();
+                    $(".model").show();
+                },
+                success:function (response) {
+                    console.log(response)
+                    if(response==0||response==2){
+                        $("#p1").text("账号或密码错误");
+                        $("#p2").text("账号或密码错误");
+                    }else{
+                     location.href="index.html"
+                    }
+                }
+            });
+        });
+    });
+</script>
+</html>

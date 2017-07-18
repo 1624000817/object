@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Verdana, Geneva, sans-serif;
+}
+a{text-decoration: none}
+ul{ list-style: none;  }
+#login{
+    width: 100%;
+    height:110px;
+}
+ #top{
+    width: 1000px;
+    height:103px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+#top>img{
+    cursor: pointer;
+}
+#top #top-right{
+    width: 502px;
+    height:44px;
+    float: right;
+    margin-top: 25px;
+}
+.box{
+    width: 100%;
+    height:600px;
+}
+.box .lossSteep{
+    width: 1000px;
+    height:80px;
+    margin: 0 auto;
+    border-bottom: 2px solid #ccc;
+}
+.box .lossSteep ul{
+    width: 800px;
+    height:80px;
+    margin: 0 auto;
+    padding-top: 45px;
+}
+.box .lossSteep ul li{
+    width: 200px;
+    height:35px;
+    font-size: 18px;
+    color: #999;
+    line-height: 30px;
+    float: left;
+    padding-bottom: 2px;
+    text-align: center;
+}
+.box .lossSteep ul li.hover{
+    color: #e83917;
+    border-bottom: 2px solid #e83917;
+}
+.box .lossSteep ul li.hover b{
+    background-color: #e83917;
+}
+.box .lossSteep ul li b{
+    display: inline-block;
+    width: 27px;
+    height:27px;
+    font-size: 16px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #ccc;
+    text-align: center;
+    margin-right: 5px;
+    line-height: 27px;
+}
+.box .lossMain{
+    width: 800px;
+    height:202px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.box .lossMain div{
+    width: 600px;
+    height: 66px;
+    margin: 0 auto;
+}
+.box .lossMain div a:hover{
+    color: #128cff;
+}
+.box .lossMain div label{
+    width: 180px;
+    display: inline-block;
+    font-size: 14px;
+    text-align: right;
+    vertical-align: middle;
+}
+.box .lossMain div input{
+    width: 280px;
+    height:40px;
+    border:1px solid #ccc;
+    padding: 0 5px;
+}
+.box .lossMain div #yz{
+    width: 100px;
+}
+.box .lossMain div img{
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.box .lossMain div a{
+    color: #999;
+    font-size: 14px;
+}
+.box .lossMain div input[type="button"]{
+    background-color: #e83917;
+    width: 120px;
+    height:40px;
+    margin-left: 182px;
+    border-radius: 3px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.box .lossMain div p{
+    width: 600px;
+    height: 24px;
+    color: #e83917 ;
+    line-height: 24px;
+    padding-left: 184px;
+    color: #ff6b52;
+}
+footer{
+    width: 100%;
+    height:132px;
+    margin-top: 50px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+footer p.first{
+    width:100%;
+    height: 35px;
+    line-height: 35px;
+    background-color: #444851;
+    text-align: center;
+}
+footer p.first a{
+    padding: 0px 17px;
+    color: #adadad;
+    font-size: 12px;
+
+}
+footer p.link{
+    font-size: 12px;
+    line-height: 24px;
+}
+footer p span{
+    color: #555;
+}
+footer  p a{
+    color: #000;
+}
+footer  p a:hover{
+    color: #fff;
+}

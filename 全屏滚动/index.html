@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    
+    <style>
+        *{ margin: 0; padding: 0;}
+        a{text-decoration: none;}
+        body{ padding-top: 50px;}
+        #big{ width:100%;transition:all 1s;
+        	position: fixed;
+        	top:50px;
+        	left:0px}
+        .li1{background-color: burlywood;}
+        .yellow{ height: 400px; 
+        	width: 100%; 
+        	background-color: deepskyblue;}
+        .pink{background: pink;}
+        #nav{ list-style:none;
+        	width: 100%;
+        	 height: 50px; 
+        	 line-height: 50px; 
+        	 position:fixed; 
+        	 left: 0; 
+        	 top: 0;
+        	  background-color:#fff ; 
+        	  z-index: 999;  }
+        #nav li{ width: 120px; 
+        	color: #777; 
+        	border-left: 1px solid #666; 
+        	text-align: center;
+        	 float: left;}
+    </style>
+</head>
+<body>
+<ul id="nav">
+   <li class="li1">第一个</li>
+   <li>第二个</li>
+   <li>第三个</li>
+   <li>第四个</li>
+   <li>第五个</li>
+   <li>第六个</li>
+   <li>第七个</li>
+</ul>
+<div id="big">
+    <div class="yellow pink">第一个</div>
+    <div class="yellow">第二个</div>
+    <div class="yellow pink">第三个</div>
+    <div class="yellow">第四个</div>
+    <div class="yellow pink">第五个</div>
+    <div class="yellow">第六个</div>
+    <div class="yellow pink">第七个</div>
+</div>
+</body>
+<script type="text/javascript">
+	var mybig=document.getElementById("big");
+	var oDivs=mybig.getElementsByTagName("div");
+	var lis=document.getElementsByTagName("li");
+	var vH=document.documentElement.clientHeight||document.body.clientHeight;
+	var index=0;
+	for(var i=0;i<oDivs.length;i++){
+		oDivs[i].style.height=vH+"px";
+	}
+	//滚轮滚动方向
+	function getWD(evt){
+		var e=evt||window.event;
+		if(e.wheelDelta){
+			return e.wheelDelta;
+		}else if(e.detail){
+			return -e.detail*40;
+		}
+	}
+	//增加监听事件兼容
+	function addEvent(obj,type,fn){
+		if(obj.addEventListener){
+			obj.addEventListener(type,fn,false);
+		}else if(obj.attachEvent){
+			obj.attachEvent("on"+type,fn);
+		}
+	}
+	//阻止默认行为
+	function prevDefault(evt){
+		var e=evt||window.event;
+		if(e.preventDefault){
+			e.preventDefault();
+		}else{
+			e.returnValue=false;
+		}
+	}
+	addEvent(document,"mousewheel",box);
+	addEvent(document,"DOMMouseScroll",box);
+	function box(e){
+		if(getWD(e)>0){//往上滚
+			index++;
+		}
+		if(getWD(e)<0){
+			index--;
+		}
+		if(index>6){
+			index=0;
+		}
+		if(index<0){
+			index=6;
+		}
+		for(var i=0;i<lis.length;i++){
+			lis[i].className=""
+		}
+		lis[index].className="li1"
+		mybig.style.top=-index*vH+50+"px";
+	}
+	
+	for(var j=0;j<lis.length;j++){
+		lis[j].setAttribute("num",j);
+		lis[j].onclick=function(ev){
+			var e=ev||window.event;
+			prevDefault(e);
+			var newIndex=this.getAttribute("num");
+			mybig.style.top=-newIndex*vH+50+"px";
+			changeColor(this);
+		}
+	}
+	function changeColor(obj){
+		for(var i=0;i<lis.length;i++){
+			if(lis[i]==obj){
+				lis[i].className="li1"
+			}else{
+				lis[i].className=""
+			}
+		}
+	}
+</script>
+</html>
